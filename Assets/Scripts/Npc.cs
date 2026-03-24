@@ -1,14 +1,16 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Npc : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text dialogueText;
-    public string dialogue;
+    public TMP_Text dialogueText;
+    public string[] dialogue;
 
     private int index;
 
+    public GameObject contButton;
     public float wordSpeed;
     public bool playerIsClose;
 
@@ -16,8 +18,51 @@ public class Npc : MonoBehaviour
     {
         if (playerIsClose && Input.GetKeyDown(KeyCode.E))
         {
-            dialoguePanel.SetActive(true);
-            dialogueText.text = dialogue;
+            if (dialoguePanel.activeInHierarchy)
+            {
+                NextLine();
+            }
+            else
+            {
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
+            }
+        }
+    }
+
+    public void zeroText()
+    {
+        dialogueText.text = "";
+        index = 0;
+        dialoguePanel.SetActive(false);
+        contButton.SetActive(false);
+    }
+
+    IEnumerator Typing()
+    {
+        dialogueText.text = "";
+        contButton.SetActive(false);
+
+        foreach (char letter in dialogue[index].ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(wordSpeed);
+        }
+
+        contButton.SetActive(true);
+    }
+
+    public void NextLine()
+    {
+        if (index < dialogue.Length - 1)
+        {
+            index++;
+            StopAllCoroutines();
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            zeroText();
         }
     }
 
@@ -25,16 +70,18 @@ public class Npc : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            playerIsClose =  true;
+            playerIsClose = true;
             Debug.Log("Player entered NPC range");
         }
     }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            playerIsClose =  false;
+            playerIsClose = false;
             Debug.Log("Player left NPC range");
+            zeroText();
         }
     }
 }
