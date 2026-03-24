@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public Interface IAttackable
+public interface IAttackable
 {
     // how much attack damage is dealt per hit
     int AttackDamage { get; }
