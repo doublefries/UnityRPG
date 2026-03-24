@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de7b2069ba5cc8f41bbaab4450b7aeaa
+guid: 3f94d20146c370f47914fd94043aedca
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -398,13 +398,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Generic Male NPCs_0
+      name: Max
       rect:
         serializedVersion: 2
-        x: 0
-        y: 830
-        width: 64
-        height: 130
+        x: 17
+        y: 843
+        width: 46
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: Generic Male NPCs_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 830
-        width: 64
-        height: 130
+        x: 95
+        y: 843
+        width: 52
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: Generic Male NPCs_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 830
-        width: 64
-        height: 130
+        x: 179
+        y: 843
+        width: 46
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: Generic Male NPCs_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 830
-        width: 64
-        height: 130
+        x: 251
+        y: 843
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,10 +489,10 @@ TextureImporter:
       name: Generic Male NPCs_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 830
-        width: 64
-        height: 130
+        x: 331
+        y: 843
+        width: 60
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,10 +511,10 @@ TextureImporter:
       name: Generic Male NPCs_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 830
-        width: 64
-        height: 130
+        x: 411
+        y: 843
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +533,10 @@ TextureImporter:
       name: Generic Male NPCs_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 830
-        width: 64
-        height: 130
+        x: 497
+        y: 843
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,10 +555,10 @@ TextureImporter:
       name: Generic Male NPCs_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 830
-        width: 64
-        height: 130
+        x: 575
+        y: 843
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,10 +577,10 @@ TextureImporter:
       name: Generic Male NPCs_8
       rect:
         serializedVersion: 2
-        x: 512
-        y: 830
-        width: 64
-        height: 130
+        x: 657
+        y: 843
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,10 +599,10 @@ TextureImporter:
       name: Generic Male NPCs_9
       rect:
         serializedVersion: 2
-        x: 576
-        y: 830
-        width: 64
-        height: 130
+        x: 737
+        y: 843
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,10 +621,10 @@ TextureImporter:
       name: Generic Male NPCs_10
       rect:
         serializedVersion: 2
-        x: 640
-        y: 830
-        width: 64
-        height: 130
+        x: 815
+        y: 843
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: Generic Male NPCs_11
       rect:
         serializedVersion: 2
-        x: 704
-        y: 830
-        width: 64
-        height: 130
+        x: 897
+        y: 843
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,10 +665,10 @@ TextureImporter:
       name: Generic Male NPCs_12
       rect:
         serializedVersion: 2
-        x: 768
-        y: 830
-        width: 64
-        height: 130
+        x: 19
+        y: 723
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,10 +687,10 @@ TextureImporter:
       name: Generic Male NPCs_13
       rect:
         serializedVersion: 2
-        x: 832
-        y: 830
-        width: 64
-        height: 130
+        x: 99
+        y: 723
+        width: 44
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -709,10 +709,10 @@ TextureImporter:
       name: Generic Male NPCs_14
       rect:
         serializedVersion: 2
-        x: 896
-        y: 830
-        width: 64
-        height: 130
+        x: 179
+        y: 723
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -731,10 +731,10 @@ TextureImporter:
       name: Generic Male NPCs_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 700
-        width: 64
-        height: 130
+        x: 251
+        y: 723
+        width: 62
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -753,10 +753,10 @@ TextureImporter:
       name: Generic Male NPCs_16
       rect:
         serializedVersion: 2
-        x: 64
-        y: 700
-        width: 64
-        height: 130
+        x: 331
+        y: 723
+        width: 62
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -775,10 +775,10 @@ TextureImporter:
       name: Generic Male NPCs_17
       rect:
         serializedVersion: 2
-        x: 128
-        y: 700
-        width: 64
-        height: 130
+        x: 411
+        y: 723
+        width: 62
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -797,10 +797,10 @@ TextureImporter:
       name: Generic Male NPCs_18
       rect:
         serializedVersion: 2
-        x: 192
-        y: 700
-        width: 64
-        height: 130
+        x: 499
+        y: 723
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: Generic Male NPCs_19
       rect:
         serializedVersion: 2
-        x: 256
-        y: 700
-        width: 64
-        height: 130
+        x: 579
+        y: 723
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -841,10 +841,10 @@ TextureImporter:
       name: Generic Male NPCs_20
       rect:
         serializedVersion: 2
-        x: 320
-        y: 700
-        width: 64
-        height: 130
+        x: 659
+        y: 723
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -863,10 +863,10 @@ TextureImporter:
       name: Generic Male NPCs_21
       rect:
         serializedVersion: 2
-        x: 384
-        y: 700
-        width: 64
-        height: 130
+        x: 739
+        y: 723
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -885,10 +885,10 @@ TextureImporter:
       name: Generic Male NPCs_22
       rect:
         serializedVersion: 2
-        x: 448
-        y: 700
-        width: 64
-        height: 130
+        x: 819
+        y: 723
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -907,10 +907,10 @@ TextureImporter:
       name: Generic Male NPCs_23
       rect:
         serializedVersion: 2
-        x: 512
-        y: 700
-        width: 64
-        height: 130
+        x: 899
+        y: 723
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -929,10 +929,10 @@ TextureImporter:
       name: Generic Male NPCs_24
       rect:
         serializedVersion: 2
-        x: 576
-        y: 700
-        width: 64
-        height: 130
+        x: 19
+        y: 603
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -951,10 +951,10 @@ TextureImporter:
       name: Generic Male NPCs_25
       rect:
         serializedVersion: 2
-        x: 640
-        y: 700
-        width: 64
-        height: 130
+        x: 99
+        y: 603
+        width: 44
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -973,10 +973,10 @@ TextureImporter:
       name: Generic Male NPCs_26
       rect:
         serializedVersion: 2
-        x: 704
-        y: 700
-        width: 64
-        height: 130
+        x: 179
+        y: 603
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -995,10 +995,10 @@ TextureImporter:
       name: Generic Male NPCs_27
       rect:
         serializedVersion: 2
-        x: 768
-        y: 700
-        width: 64
-        height: 130
+        x: 249
+        y: 603
+        width: 62
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1017,10 +1017,10 @@ TextureImporter:
       name: Generic Male NPCs_28
       rect:
         serializedVersion: 2
-        x: 832
-        y: 700
-        width: 64
-        height: 130
+        x: 329
+        y: 603
+        width: 62
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,10 +1039,10 @@ TextureImporter:
       name: Generic Male NPCs_29
       rect:
         serializedVersion: 2
-        x: 896
-        y: 700
-        width: 64
-        height: 130
+        x: 409
+        y: 603
+        width: 62
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1061,10 +1061,10 @@ TextureImporter:
       name: Generic Male NPCs_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 570
-        width: 64
-        height: 130
+        x: 499
+        y: 603
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1083,10 +1083,10 @@ TextureImporter:
       name: Generic Male NPCs_31
       rect:
         serializedVersion: 2
-        x: 64
-        y: 570
-        width: 64
-        height: 130
+        x: 579
+        y: 603
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1105,10 +1105,10 @@ TextureImporter:
       name: Generic Male NPCs_32
       rect:
         serializedVersion: 2
-        x: 128
-        y: 570
-        width: 64
-        height: 130
+        x: 659
+        y: 603
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1127,10 +1127,10 @@ TextureImporter:
       name: Generic Male NPCs_33
       rect:
         serializedVersion: 2
-        x: 192
-        y: 570
-        width: 64
-        height: 130
+        x: 739
+        y: 603
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1149,10 +1149,10 @@ TextureImporter:
       name: Generic Male NPCs_34
       rect:
         serializedVersion: 2
-        x: 256
-        y: 570
-        width: 64
-        height: 130
+        x: 819
+        y: 603
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1171,10 +1171,10 @@ TextureImporter:
       name: Generic Male NPCs_35
       rect:
         serializedVersion: 2
-        x: 320
-        y: 570
-        width: 64
-        height: 130
+        x: 899
+        y: 603
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1193,10 +1193,10 @@ TextureImporter:
       name: Generic Male NPCs_36
       rect:
         serializedVersion: 2
-        x: 384
-        y: 570
-        width: 64
-        height: 130
+        x: 17
+        y: 483
+        width: 46
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1215,10 +1215,10 @@ TextureImporter:
       name: Generic Male NPCs_37
       rect:
         serializedVersion: 2
-        x: 448
-        y: 570
-        width: 64
-        height: 130
+        x: 95
+        y: 483
+        width: 52
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1237,10 +1237,10 @@ TextureImporter:
       name: Generic Male NPCs_38
       rect:
         serializedVersion: 2
-        x: 512
-        y: 570
-        width: 64
-        height: 130
+        x: 179
+        y: 483
+        width: 46
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1259,10 +1259,10 @@ TextureImporter:
       name: Generic Male NPCs_39
       rect:
         serializedVersion: 2
-        x: 576
-        y: 570
-        width: 64
-        height: 130
+        x: 251
+        y: 483
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1281,10 +1281,10 @@ TextureImporter:
       name: Generic Male NPCs_40
       rect:
         serializedVersion: 2
-        x: 640
-        y: 570
-        width: 64
-        height: 130
+        x: 331
+        y: 483
+        width: 60
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1303,10 +1303,10 @@ TextureImporter:
       name: Generic Male NPCs_41
       rect:
         serializedVersion: 2
-        x: 704
-        y: 570
-        width: 64
-        height: 130
+        x: 411
+        y: 483
+        width: 60
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1325,10 +1325,10 @@ TextureImporter:
       name: Generic Male NPCs_42
       rect:
         serializedVersion: 2
-        x: 768
-        y: 570
-        width: 64
-        height: 130
+        x: 497
+        y: 483
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1347,10 +1347,10 @@ TextureImporter:
       name: Generic Male NPCs_43
       rect:
         serializedVersion: 2
-        x: 832
-        y: 570
-        width: 64
-        height: 130
+        x: 575
+        y: 483
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1369,10 +1369,10 @@ TextureImporter:
       name: Generic Male NPCs_44
       rect:
         serializedVersion: 2
-        x: 896
-        y: 570
-        width: 64
-        height: 130
+        x: 657
+        y: 483
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1391,10 +1391,10 @@ TextureImporter:
       name: Generic Male NPCs_45
       rect:
         serializedVersion: 2
-        x: 0
-        y: 440
-        width: 64
-        height: 130
+        x: 737
+        y: 483
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1413,10 +1413,10 @@ TextureImporter:
       name: Generic Male NPCs_46
       rect:
         serializedVersion: 2
-        x: 64
-        y: 440
-        width: 64
-        height: 130
+        x: 815
+        y: 483
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1435,10 +1435,10 @@ TextureImporter:
       name: Generic Male NPCs_47
       rect:
         serializedVersion: 2
-        x: 128
-        y: 440
-        width: 64
-        height: 130
+        x: 897
+        y: 483
+        width: 48
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1457,10 +1457,10 @@ TextureImporter:
       name: Generic Male NPCs_48
       rect:
         serializedVersion: 2
-        x: 192
-        y: 440
-        width: 64
-        height: 130
+        x: 17
+        y: 363
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1479,10 +1479,10 @@ TextureImporter:
       name: Generic Male NPCs_49
       rect:
         serializedVersion: 2
-        x: 256
-        y: 440
-        width: 64
-        height: 130
+        x: 95
+        y: 363
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1501,10 +1501,10 @@ TextureImporter:
       name: Generic Male NPCs_50
       rect:
         serializedVersion: 2
-        x: 320
-        y: 440
-        width: 64
-        height: 130
+        x: 179
+        y: 363
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1523,10 +1523,10 @@ TextureImporter:
       name: Generic Male NPCs_51
       rect:
         serializedVersion: 2
-        x: 384
-        y: 440
-        width: 64
-        height: 130
+        x: 257
+        y: 363
+        width: 46
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1545,10 +1545,10 @@ TextureImporter:
       name: Generic Male NPCs_52
       rect:
         serializedVersion: 2
-        x: 448
-        y: 440
-        width: 64
-        height: 130
+        x: 335
+        y: 363
+        width: 52
+        height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1567,10 +1567,10 @@ TextureImporter:
       name: Generic Male NPCs_53
       rect:
         serializedVersion: 2
-        x: 512
-        y: 440
-        width: 64
-        height: 130
+        x: 419
+        y: 363
+        width: 46
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,10 +1589,10 @@ TextureImporter:
       name: Generic Male NPCs_54
       rect:
         serializedVersion: 2
-        x: 576
-        y: 440
-        width: 64
-        height: 130
+        x: 497
+        y: 363
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1611,10 +1611,10 @@ TextureImporter:
       name: Generic Male NPCs_55
       rect:
         serializedVersion: 2
-        x: 640
-        y: 440
-        width: 64
-        height: 130
+        x: 575
+        y: 363
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1633,10 +1633,10 @@ TextureImporter:
       name: Generic Male NPCs_56
       rect:
         serializedVersion: 2
-        x: 704
-        y: 440
-        width: 64
-        height: 130
+        x: 659
+        y: 363
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1655,10 +1655,10 @@ TextureImporter:
       name: Generic Male NPCs_57
       rect:
         serializedVersion: 2
-        x: 768
-        y: 440
-        width: 64
-        height: 130
+        x: 737
+        y: 363
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1677,10 +1677,10 @@ TextureImporter:
       name: Generic Male NPCs_58
       rect:
         serializedVersion: 2
-        x: 832
-        y: 440
-        width: 64
-        height: 130
+        x: 815
+        y: 363
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1699,10 +1699,10 @@ TextureImporter:
       name: Generic Male NPCs_59
       rect:
         serializedVersion: 2
-        x: 896
-        y: 440
-        width: 64
-        height: 130
+        x: 899
+        y: 363
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1721,10 +1721,10 @@ TextureImporter:
       name: Generic Male NPCs_60
       rect:
         serializedVersion: 2
-        x: 0
-        y: 310
-        width: 64
-        height: 130
+        x: 19
+        y: 243
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1743,10 +1743,10 @@ TextureImporter:
       name: Generic Male NPCs_61
       rect:
         serializedVersion: 2
-        x: 64
-        y: 310
-        width: 64
-        height: 130
+        x: 99
+        y: 243
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1765,10 +1765,10 @@ TextureImporter:
       name: Generic Male NPCs_62
       rect:
         serializedVersion: 2
-        x: 128
-        y: 310
-        width: 64
-        height: 130
+        x: 179
+        y: 243
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1787,10 +1787,10 @@ TextureImporter:
       name: Generic Male NPCs_63
       rect:
         serializedVersion: 2
-        x: 192
-        y: 310
-        width: 64
-        height: 130
+        x: 259
+        y: 243
+        width: 44
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1809,10 +1809,10 @@ TextureImporter:
       name: Generic Male NPCs_64
       rect:
         serializedVersion: 2
-        x: 256
-        y: 310
-        width: 64
-        height: 130
+        x: 339
+        y: 243
+        width: 44
+        height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1831,10 +1831,10 @@ TextureImporter:
       name: Generic Male NPCs_65
       rect:
         serializedVersion: 2
-        x: 320
-        y: 310
-        width: 64
-        height: 130
+        x: 419
+        y: 243
+        width: 44
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1853,10 +1853,10 @@ TextureImporter:
       name: Generic Male NPCs_66
       rect:
         serializedVersion: 2
-        x: 384
-        y: 310
-        width: 64
-        height: 130
+        x: 499
+        y: 243
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1875,10 +1875,10 @@ TextureImporter:
       name: Generic Male NPCs_67
       rect:
         serializedVersion: 2
-        x: 448
-        y: 310
-        width: 64
-        height: 130
+        x: 579
+        y: 243
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1897,10 +1897,10 @@ TextureImporter:
       name: Generic Male NPCs_68
       rect:
         serializedVersion: 2
-        x: 512
-        y: 310
-        width: 64
-        height: 130
+        x: 659
+        y: 243
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1919,10 +1919,10 @@ TextureImporter:
       name: Generic Male NPCs_69
       rect:
         serializedVersion: 2
-        x: 576
-        y: 310
-        width: 64
-        height: 130
+        x: 739
+        y: 243
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1941,10 +1941,10 @@ TextureImporter:
       name: Generic Male NPCs_70
       rect:
         serializedVersion: 2
-        x: 640
-        y: 310
-        width: 64
-        height: 130
+        x: 819
+        y: 243
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1963,10 +1963,10 @@ TextureImporter:
       name: Generic Male NPCs_71
       rect:
         serializedVersion: 2
-        x: 704
-        y: 310
-        width: 64
-        height: 130
+        x: 899
+        y: 243
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1985,10 +1985,10 @@ TextureImporter:
       name: Generic Male NPCs_72
       rect:
         serializedVersion: 2
-        x: 768
-        y: 310
-        width: 64
-        height: 130
+        x: 19
+        y: 123
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2007,10 +2007,10 @@ TextureImporter:
       name: Generic Male NPCs_73
       rect:
         serializedVersion: 2
-        x: 832
-        y: 310
-        width: 64
-        height: 130
+        x: 99
+        y: 123
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2029,10 +2029,10 @@ TextureImporter:
       name: Generic Male NPCs_74
       rect:
         serializedVersion: 2
-        x: 896
-        y: 310
-        width: 64
-        height: 130
+        x: 179
+        y: 123
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2051,10 +2051,10 @@ TextureImporter:
       name: Generic Male NPCs_75
       rect:
         serializedVersion: 2
-        x: 0
-        y: 180
-        width: 64
-        height: 130
+        x: 259
+        y: 123
+        width: 44
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2073,10 +2073,10 @@ TextureImporter:
       name: Generic Male NPCs_76
       rect:
         serializedVersion: 2
-        x: 64
-        y: 180
-        width: 64
-        height: 130
+        x: 339
+        y: 123
+        width: 44
+        height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2095,10 +2095,10 @@ TextureImporter:
       name: Generic Male NPCs_77
       rect:
         serializedVersion: 2
-        x: 128
-        y: 180
-        width: 64
-        height: 130
+        x: 419
+        y: 123
+        width: 44
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2117,10 +2117,10 @@ TextureImporter:
       name: Generic Male NPCs_78
       rect:
         serializedVersion: 2
-        x: 192
-        y: 180
-        width: 64
-        height: 130
+        x: 499
+        y: 123
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2139,10 +2139,10 @@ TextureImporter:
       name: Generic Male NPCs_79
       rect:
         serializedVersion: 2
-        x: 256
-        y: 180
-        width: 64
-        height: 130
+        x: 579
+        y: 123
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2161,10 +2161,10 @@ TextureImporter:
       name: Generic Male NPCs_80
       rect:
         serializedVersion: 2
-        x: 320
-        y: 180
-        width: 64
-        height: 130
+        x: 659
+        y: 123
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2183,10 +2183,10 @@ TextureImporter:
       name: Generic Male NPCs_81
       rect:
         serializedVersion: 2
-        x: 384
-        y: 180
-        width: 64
-        height: 130
+        x: 739
+        y: 123
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2205,10 +2205,10 @@ TextureImporter:
       name: Generic Male NPCs_82
       rect:
         serializedVersion: 2
-        x: 448
-        y: 180
-        width: 64
-        height: 130
+        x: 819
+        y: 123
+        width: 44
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2227,10 +2227,10 @@ TextureImporter:
       name: Generic Male NPCs_83
       rect:
         serializedVersion: 2
-        x: 512
-        y: 180
-        width: 64
-        height: 130
+        x: 899
+        y: 123
+        width: 44
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2249,10 +2249,10 @@ TextureImporter:
       name: Generic Male NPCs_84
       rect:
         serializedVersion: 2
-        x: 576
-        y: 180
-        width: 64
-        height: 130
+        x: 17
+        y: 3
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2271,10 +2271,10 @@ TextureImporter:
       name: Generic Male NPCs_85
       rect:
         serializedVersion: 2
-        x: 640
-        y: 180
-        width: 64
-        height: 130
+        x: 95
+        y: 3
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2293,10 +2293,10 @@ TextureImporter:
       name: Generic Male NPCs_86
       rect:
         serializedVersion: 2
-        x: 704
-        y: 180
-        width: 64
-        height: 130
+        x: 179
+        y: 3
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2315,10 +2315,10 @@ TextureImporter:
       name: Generic Male NPCs_87
       rect:
         serializedVersion: 2
-        x: 768
-        y: 180
-        width: 64
-        height: 130
+        x: 257
+        y: 3
+        width: 46
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2337,10 +2337,10 @@ TextureImporter:
       name: Generic Male NPCs_88
       rect:
         serializedVersion: 2
-        x: 832
-        y: 180
-        width: 64
-        height: 130
+        x: 335
+        y: 3
+        width: 52
+        height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2359,10 +2359,10 @@ TextureImporter:
       name: Generic Male NPCs_89
       rect:
         serializedVersion: 2
-        x: 896
-        y: 180
-        width: 64
-        height: 130
+        x: 419
+        y: 3
+        width: 46
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2381,10 +2381,10 @@ TextureImporter:
       name: Generic Male NPCs_90
       rect:
         serializedVersion: 2
-        x: 0
-        y: 50
-        width: 64
-        height: 130
+        x: 497
+        y: 3
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2403,10 +2403,10 @@ TextureImporter:
       name: Generic Male NPCs_91
       rect:
         serializedVersion: 2
-        x: 64
-        y: 50
-        width: 64
-        height: 130
+        x: 575
+        y: 3
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2425,10 +2425,10 @@ TextureImporter:
       name: Generic Male NPCs_92
       rect:
         serializedVersion: 2
-        x: 128
-        y: 50
-        width: 64
-        height: 130
+        x: 659
+        y: 3
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2447,10 +2447,10 @@ TextureImporter:
       name: Generic Male NPCs_93
       rect:
         serializedVersion: 2
-        x: 192
-        y: 50
-        width: 64
-        height: 130
+        x: 737
+        y: 3
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2469,10 +2469,10 @@ TextureImporter:
       name: Generic Male NPCs_94
       rect:
         serializedVersion: 2
-        x: 256
-        y: 50
-        width: 64
-        height: 130
+        x: 815
+        y: 3
+        width: 52
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2491,10 +2491,10 @@ TextureImporter:
       name: Generic Male NPCs_95
       rect:
         serializedVersion: 2
-        x: 320
-        y: 50
-        width: 64
-        height: 130
+        x: 899
+        y: 3
+        width: 46
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2509,209 +2509,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_96
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1263da74847c6640999a4d210e1daaa
-      internalID: 652223796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_97
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f9d01fca372c9c4fa2a9c70173aa71d
-      internalID: -1049349792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_98
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bcacb7b1c79d69488090ba71192a594
-      internalID: -1969457371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_99
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 740bed2b6da3e75439084f1589142932
-      internalID: 106404778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_100
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70645749530ee5f4ca0a1bb3a7ee3e93
-      internalID: -216769784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_101
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cc5a756991edff42b672f9b24834842
-      internalID: -1287009984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_102
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ca614c3487c205438ba94698b268edd
-      internalID: -606578722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_103
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b83eec56c21923943ac66b9b7e96247b
-      internalID: 1631681523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Generic Male NPCs_104
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 50
-        width: 64
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09bd900e63205414b90eae2843318dfc
-      internalID: 1184270725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bd854ede564d5a743a35a26cd8cc69d2
+    spriteID: c085b5085aab56f469633a516c076a69
     internalID: 0
     vertices: []
     indices: 
@@ -2719,18 +2521,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":130.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Generic Male NPCs_0: -3658569868278044101
       Generic Male NPCs_1: -883869454746441436
       Generic Male NPCs_10: -6805567468232859938
-      Generic Male NPCs_100: -216769784
-      Generic Male NPCs_101: -1287009984
-      Generic Male NPCs_102: -606578722
-      Generic Male NPCs_103: 1631681523
-      Generic Male NPCs_104: 1184270725
       Generic Male NPCs_11: 665459149854171720
       Generic Male NPCs_12: 6190635301513414327
       Generic Male NPCs_13: -2231686138901855442
@@ -2824,10 +2618,7 @@ TextureImporter:
       Generic Male NPCs_93: 5699676835188191301
       Generic Male NPCs_94: 448495600122256044
       Generic Male NPCs_95: -7986631684109397022
-      Generic Male NPCs_96: 652223796
-      Generic Male NPCs_97: -1049349792
-      Generic Male NPCs_98: -1969457371
-      Generic Male NPCs_99: 106404778
+      Max: -3658569868278044101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
