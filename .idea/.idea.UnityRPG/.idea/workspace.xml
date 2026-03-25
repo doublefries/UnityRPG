@@ -20,7 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectCharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterSelection.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -92,7 +92,7 @@
       <updated>1773762768588</updated>
       <workItem from="1773762768589" duration="1901000" />
       <workItem from="1773944277240" duration="2707000" />
-      <workItem from="1773955553361" duration="17939000" />
+      <workItem from="1773955553361" duration="19467000" />
     </task>
     <servers />
   </component>
