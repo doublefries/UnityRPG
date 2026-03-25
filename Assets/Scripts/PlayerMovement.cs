@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //If we get count of 0, there are no collision, move is valid
         int count = _rb.Cast(direction, movementFilter, _castCollisions, currentMoveSpeed *Time.fixedDeltaTime + collisionOffset);
+        Console.Write(count);
         if (count == 0)
         {
             _rb.MovePosition(_rb.position + (direction * currentMoveSpeed * Time.fixedDeltaTime));
