@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Npc : MonoBehaviour
 {
@@ -9,31 +10,37 @@ public class Npc : MonoBehaviour
     public string[] dialogue;
     public string npcName;
     public TMP_Text nameText;
-    public UnityEngine.UI.Image profileImage;
+    public Image profileImage;
     public Sprite npcImage;
 
     private int index;
 
-    public GameObject contButton;
+    public Button contButton;
     public float wordSpeed;
     public bool playerIsClose;
 
+    private bool isTyping;
+    private bool dialogueOpen;
+
     void Update()
     {
-        if (playerIsClose && Input.GetKeyDown(KeyCode.E))
+        if (playerIsClose && Input.GetKeyDown(KeyCode.E) && !dialogueOpen)
         {
-            if (dialoguePanel.activeInHierarchy)
-            {
-                NextLine();
-            }
-            else
-            {
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
-                nameText.text = npcName;
-                profileImage.sprite = npcImage;
-                
-            }
+            if (dialogue == null || dialogue.Length == 0)
+                return;
+
+            dialogueOpen = true;
+            index = 0;
+
+            dialoguePanel.SetActive(true);
+            nameText.text = npcName;
+            profileImage.sprite = npcImage;
+
+            contButton.onClick.RemoveAllListeners();
+            contButton.onClick.AddListener(NextLine);
+
+            StopAllCoroutines();
+            StartCoroutine(Typing());
         }
     }
 
@@ -41,14 +48,23 @@ public class Npc : MonoBehaviour
     {
         dialogueText.text = "";
         index = 0;
+        dialogueOpen = false;
+        isTyping = false;
         dialoguePanel.SetActive(false);
-        contButton.SetActive(false);
+        contButton.gameObject.SetActive(false);
     }
 
     IEnumerator Typing()
     {
+        if (dialogue == null || dialogue.Length == 0)
+            yield break;
+
+        if (index < 0 || index >= dialogue.Length)
+            yield break;
+
+        isTyping = true;
         dialogueText.text = "";
-        contButton.SetActive(false);
+        contButton.gameObject.SetActive(false);
 
         foreach (char letter in dialogue[index].ToCharArray())
         {
@@ -56,11 +72,15 @@ public class Npc : MonoBehaviour
             yield return new WaitForSeconds(wordSpeed);
         }
 
-        contButton.SetActive(true);
+        isTyping = false;
+        contButton.gameObject.SetActive(true);
     }
 
     public void NextLine()
     {
+        if (!dialogueOpen || isTyping)
+            return;
+
         if (index < dialogue.Length - 1)
         {
             index++;
@@ -75,7 +95,7 @@ public class Npc : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             playerIsClose = true;
             Debug.Log("Player entered NPC range");
@@ -84,7 +104,7 @@ public class Npc : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             playerIsClose = false;
             Debug.Log("Player left NPC range");

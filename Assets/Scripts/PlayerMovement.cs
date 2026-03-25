@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,10 +13,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _moveInput;
     public ContactFilter2D movementFilter;
     List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>(); //list for the collisions that the ray cast finds
+    
+    Animator _animator;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>(); 
     }
 
     // Capture input in Update for better responsiveness
@@ -23,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
+        
+        UpdateAnimator();
     }
     
     // Physics updates in FixedUpdate
@@ -31,12 +37,34 @@ public class PlayerMovement : MonoBehaviour
         //If movement input is not 0 player will try to move
         if (_moveInput != Vector2.zero)
         {
-            //If we get count of 0, there are no collision, move is valid
-            int count = _rb.Cast(_moveInput, movementFilter, _castCollisions, currentMoveSpeed *Time.fixedDeltaTime + collisionOffset);
-            if (count == 0)
-            {
-                _rb.MovePosition(_rb.position + (_moveInput * currentMoveSpeed * Time.fixedDeltaTime));
-            }
+           bool success = TryMove(_moveInput);
+           
+           //Makes movement along collisions smoother
+           if (!success)
+           {
+               success = TryMove(new Vector2(_moveInput.x,0));
+
+               if (!success)
+               {
+                   success = TryMove(new Vector2(0, _moveInput.y));
+               }
+           }
+        }
+    }
+
+    private bool TryMove(Vector2 direction) //Better with handling collisions
+    {
+        //If we get count of 0, there are no collision, move is valid
+        int count = _rb.Cast(direction, movementFilter, _castCollisions, currentMoveSpeed *Time.fixedDeltaTime + collisionOffset);
+        Console.Write(count);
+        if (count == 0)
+        {
+            _rb.MovePosition(_rb.position + (direction * currentMoveSpeed * Time.fixedDeltaTime));
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
     void OnMove(InputValue movementValue)
@@ -44,5 +72,16 @@ public class PlayerMovement : MonoBehaviour
         _moveInput = movementValue.Get<Vector2>();
     }
 
-    
+    void UpdateAnimator()
+    {
+        bool isMoving = _moveInput != Vector2.zero;
+        _animator.SetBool("isMoving", isMoving);
+
+        if (isMoving)
+        {
+            Vector2 normalizedInput = _moveInput.normalized;
+            _animator.SetFloat("MoveX", normalizedInput.x);
+            _animator.SetFloat("MoveY", normalizedInput.y);
+        }
+    }
 }
