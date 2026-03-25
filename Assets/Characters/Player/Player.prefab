@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8def4735389baf44977040c672e0ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  currentMoveSpeed: 1
+  currentMoveSpeed: 5
   collisionOffset: 0.05
   movementFilter:
     useTriggers: 0
