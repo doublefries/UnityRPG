@@ -2,10 +2,12 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
-public class Character : MonoBehaviour
+[Serializable] 
+public class Character
+
 {
     public GameObject prefab;
     public string name;
-    public Image icon;
+    public Sprite icon;
     
 }
