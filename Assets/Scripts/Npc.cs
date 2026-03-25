@@ -7,6 +7,10 @@ public class Npc : MonoBehaviour
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
     public string[] dialogue;
+    public string npcName;
+    public TMP_Text nameText;
+    public UnityEngine.UI.Image profileImage;
+    public Sprite npcImage;
 
     private int index;
 
@@ -24,7 +28,9 @@ public class Npc : MonoBehaviour
             }
             else
             {
+                nameText.text = npcName;
                 dialoguePanel.SetActive(true);
+                profileImage.sprite = npcImage;
                 StartCoroutine(Typing());
             }
         }
