@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+  public static GameManager instance;
+  
+  public Character[] characters; //Contains player and player blue
+
+  public Character currentCharacter;
+
+  private void Awake()
+  {
+    if (instance == null)
     {
-        
+      instance = this; //Create manager
     }
 
-    // Update is called once per frame
-    void Update()
+    else
     {
-        
+      Destroy(gameObject); //If we already have a game manager, destroy the one we created
     }
+    
+    DontDestroyOnLoad(gameObject); //Continue for when we swap scenes
+  }
 }
