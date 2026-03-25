@@ -19,12 +19,18 @@ public class CharacterSelectionUI : MonoBehaviour
                 GameManager.instance.SetCharacter(c);
                 if (selectedCharacter != null)
                 {
-                    prevCharacter = selectedCharacter;
+                    prevCharacter = selectedCharacter; //For Animation
                 }
                 
                 selectedCharacter = option.transform; 
-
             });
+            
+            Text text =  option.GetComponentInChildren<Text>();
+            text.text = c.name; //set text to that characters name
+            
+            Image image = option.GetComponentInChildren<Image>();
+            image.sprite = c.icon;
+
         }
     }
 }
