@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
+        
+        UpdateAnimator();
     }
     
     // Physics updates in FixedUpdate
@@ -68,5 +70,16 @@ public class PlayerMovement : MonoBehaviour
         _moveInput = movementValue.Get<Vector2>();
     }
 
-    
+    void UpdateAnimator()
+    {
+        bool isMoving = _moveInput != Vector2.zero;
+        _animator.SetBool("isMoving", isMoving);
+
+        if (isMoving)
+        {
+            Vector2 normalizedInput = _moveInput.normalized;
+            _animator.SetFloat("MoveX", normalizedInput.x);
+            _animator.SetFloat("MoveY", normalizedInput.y);
+        }
+    }
 }
