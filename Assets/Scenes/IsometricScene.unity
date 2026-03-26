@@ -1136,7 +1136,7 @@ PrefabInstance:
       objectReference: {fileID: 779229210}
     - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: 'dialogue.Array.data[0]'
-      value: Hello!BYE
+      value: Hello!
       objectReference: {fileID: 0}
     - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: 'dialogue.Array.data[1]'
