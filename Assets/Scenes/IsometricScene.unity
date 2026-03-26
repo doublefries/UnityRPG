@@ -136,6 +136,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.625
       objectReference: {fileID: 0}
@@ -195,6 +203,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leo
       objectReference: {fileID: 0}
+    - target: {fileID: 8512267139366727119, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512267139366727119, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9072323395158037801, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: npcName
       value: Leo
@@ -223,6 +239,13 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 779229210}
+    - target: {fileID: 9072323395158037801, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: 'dialogue.Array.data[1]'
+      value: The goal of this level is to navigate the collapsing world while facing
+        mobs and reaching the final region. You must complete the level by defeating
+        the final boss and synthesizing the cure in the laboratory to successfully
+        restore the world.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1067,6 +1090,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: npcName
       value: Max
@@ -1095,6 +1134,17 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 779229210}
+    - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: 'dialogue.Array.data[0]'
+      value: Hello!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: 'dialogue.Array.data[1]'
+      value: The goal of this level is precisely timing jumps while responding to
+        moving platforms and avoiding falling into the lava. You must complete the
+        level by jumping across floating platforms and reaching the end without falling
+        to successfully finish the level.
+      objectReference: {fileID: 0}
     - target: {fileID: 3120791048733451053, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -1113,7 +1163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3120791048733451053, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3120791048733451053, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1175,6 +1225,14 @@ PrefabInstance:
     - target: {fileID: 2025939766307781655, guid: 655caa9d8abaade4685f33b9be748d8c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482964963438495561, guid: 655caa9d8abaade4685f33b9be748d8c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482964963438495561, guid: 655caa9d8abaade4685f33b9be748d8c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 6323395299758730364, guid: 655caa9d8abaade4685f33b9be748d8c, type: 3}
       propertyPath: m_Pivot.x
@@ -1373,6 +1431,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.0625
       objectReference: {fileID: 0}
@@ -1432,6 +1498,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jonh-NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 8512267139366727119, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512267139366727119, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9072323395158037801, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: npcName
       value: Jonh
@@ -1460,6 +1534,12 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 779229210}
+    - target: {fileID: 9072323395158037801, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: 'dialogue.Array.data[1]'
+      value: 'The goal of this level is to safely escort the healer avoiding damage
+        by the mobs. You must complete the level with more then 1 heart left to successfully
+        complete the level. '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1571,7 +1651,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5114,13 +5194,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7099313639165137941, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734328144356541292, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8342056027575607875, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6030,12 +6118,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.875
       objectReference: {fileID: 0}
     - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: npcName
@@ -6065,6 +6169,13 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 779229210}
+    - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: 'dialogue.Array.data[1]'
+      value: The goal of this level is to learn the sliding mechanic while navigating
+        the ice cave and avoiding enemies and traps. You must complete the level
+        by killing the mini boss and entering the portal to successfully progress
+        to the main menu.
+      objectReference: {fileID: 0}
     - target: {fileID: 3120791048733451053, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -6960,6 +7071,8 @@ GameObject:
   - component: {fileID: 1498845490}
   - component: {fileID: 1498845492}
   - component: {fileID: 1498845491}
+  - component: {fileID: 1498845494}
+  - component: {fileID: 1498845493}
   m_Layer: 0
   m_Name: IsoMapLayer1
   m_TagString: Untagged
@@ -7780,6 +7893,40 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!65 &1498845493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498845489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.47, y: 3.6, z: 1}
+  m_Center: {x: -6.16, y: 2.02, z: 0.5}
+--- !u!114 &1498845494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498845489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4a2b752fb4e47f7929cc03dc6c2fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneClickTarget
+  sceneToLoad: Level1Scene
 --- !u!1001 &1627304491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7795,6 +7942,14 @@ PrefabInstance:
     - target: {fileID: 54634500519353170, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1383572872841333837, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -7860,6 +8015,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robert_NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 8512267139366727119, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512267139366727119, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9072323395158037801, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
       propertyPath: npcName
       value: Robert
@@ -7888,6 +8051,13 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 779229210}
+    - target: {fileID: 9072323395158037801, guid: aca941f15f771a74fb038c428cd45e3e, type: 3}
+      propertyPath: 'dialogue.Array.data[1]'
+      value: 'The goal of this level is to navigate a random maze while evading mobs
+        and activating pressure plates to clear plague vines. You must complete the
+        level by collecting both halves of the ingredient to successfully finish
+        the level. '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
