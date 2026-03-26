@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IsometricScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Level1Scene.unity
+    guid: e4b9c10aebe9143d78b9e37ba7eef66f
+  - enabled: 1
+    path: Assets/Scenes/Level2Scene.unity
+    guid: 24d73f04be544402184ba0dc9562c59e
+  - enabled: 1
+    path: Assets/Scenes/Level3Scene.unity
+    guid: fd2df6ad3247a47c08dfa847145ae1bb
+  - enabled: 1
+    path: Assets/Scenes/Level4Scene.unity
+    guid: 88144d537d4814fb69420ab9ec714c71
+  - enabled: 1
+    path: Assets/Scenes/Level5Scene.unity
+    guid: 75fa4cda770e844a3a4dbb3f8e390b33
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
