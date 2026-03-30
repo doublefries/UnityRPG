@@ -9,8 +9,14 @@ public class PlayerMovement : MonoBehaviour
     // We remove the manual assignment of moveSpeed and let the Player class set it
     public float currentMoveSpeed = 1f;
     public float collisionOffset = 0.05f;
+    [Header("Jump")]
+    [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private Transform groundCheckPoint;
+    [SerializeField] private float groundCheckRadius = 0.2f;
+    [SerializeField] private LayerMask groundLayerMask;
     Rigidbody2D _rb;
     private Vector2 _moveInput;
+    private bool _jumpQueued;
     public ContactFilter2D movementFilter;
     List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>(); //list for the collisions that the ray cast finds
     
@@ -27,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            _jumpQueued = true;
+        }
         
         UpdateAnimator();
     }
@@ -49,6 +60,12 @@ public class PlayerMovement : MonoBehaviour
                    success = TryMove(new Vector2(0, _moveInput.y));
                }
            }
+        }
+
+        if (_jumpQueued)
+        {
+            Jump();
+            _jumpQueued = false;
         }
     }
 
@@ -83,5 +100,27 @@ public class PlayerMovement : MonoBehaviour
             _animator.SetFloat("MoveX", normalizedInput.x);
             _animator.SetFloat("MoveY", normalizedInput.y);
         }
+    }
+
+    public bool CheckGrounded()
+    {
+        if (groundCheckPoint == null)
+        {
+            return false;
+        }
+
+        return Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayerMask);
+    }
+
+    public void Jump()
+    {
+        if (!CheckGrounded())
+        {
+            Debug.Log("Not grounded");
+            return;
+        }
+
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0f);
+        _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 }
