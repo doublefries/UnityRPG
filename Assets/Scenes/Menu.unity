@@ -332,6 +332,7 @@ MonoBehaviour:
   optionPrefab: {fileID: 2255591237988974437, guid: f864819e096bb174999315712dcf09a4, type: 3}
   prevCharacter: {fileID: 0}
   selectedCharacter: {fileID: 0}
+  startButton: {fileID: 2067487194}
 --- !u!1 &712830433
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,16 +544,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   characters:
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
     name: RED MAN
     icon: {fileID: 9128384846270689552, guid: 8921388d16b25b54999ae6db77bb0ba0, type: 3}
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 6114917693223715754, guid: 7b0dda8dcea33ef489a46c470365c3d1, type: 3}
     name: BLUE BOY
     icon: {fileID: 9128384846270689552, guid: 01a970e5b78787443b402adc3cf1efc0, type: 3}
   currentCharacter:
     prefab: {fileID: 0}
     name: 
     icon: {fileID: 0}
+  isometricSceneName: isometricScene
 --- !u!4 &1053759623
 Transform:
   m_ObjectHideFlags: 0
