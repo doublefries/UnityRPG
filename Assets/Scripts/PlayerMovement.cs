@@ -14,7 +14,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheckPoint;
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayerMask;
+    [Header("Scene Movement Overrides")]
+    [SerializeField] private bool allowVerticalMovement = true;
     Rigidbody2D _rb;
+    private Collider2D _collider;
     private Vector2 _moveInput;
     private bool _jumpQueued;
     public ContactFilter2D movementFilter;
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<Collider2D>();
         _animator = GetComponent<Animator>(); 
     }
 
@@ -33,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
+        ApplyMovementRestrictions();
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -87,6 +92,15 @@ public class PlayerMovement : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         _moveInput = movementValue.Get<Vector2>();
+        ApplyMovementRestrictions();
+    }
+
+    private void ApplyMovementRestrictions()
+    {
+        if (!allowVerticalMovement)
+        {
+            _moveInput.y = 0f;
+        }
     }
 
     void UpdateAnimator()
@@ -104,12 +118,20 @@ public class PlayerMovement : MonoBehaviour
 
     public bool CheckGrounded()
     {
-        if (groundCheckPoint == null)
+        bool groundedByCheckPoint = false;
+        if (groundCheckPoint != null)
         {
-            return false;
+            groundedByCheckPoint = Physics2D.OverlapCircle(
+                groundCheckPoint.position,
+                groundCheckRadius,
+                groundLayerMask
+            );
         }
 
-        return Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayerMask);
+        // Also allow jumping when the player collider is touching valid ground layers.
+        // This helps with moving/floating platforms while still respecting the layer mask.
+        bool groundedByCollider = _collider != null && _collider.IsTouchingLayers(groundLayerMask);
+        return groundedByCheckPoint || groundedByCollider;
     }
 
     public void Jump()
