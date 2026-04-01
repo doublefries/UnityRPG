@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayerMask;
     [Header("Scene Movement Overrides")]
+    [SerializeField] private bool enableJump = true;
     [SerializeField] private bool allowVerticalMovement = true;
     Rigidbody2D _rb;
     private Collider2D _collider;
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         _moveInput.y = Input.GetAxisRaw("Vertical");
         ApplyMovementRestrictions();
 
-        if (Input.GetButtonDown("Jump"))
+        if (enableJump && Input.GetButtonDown("Jump"))
         {
             _jumpQueued = true;
         }
@@ -50,24 +51,19 @@ public class PlayerMovement : MonoBehaviour
     // Physics updates in FixedUpdate
     void FixedUpdate()
     {
-        //If movement input is not 0 player will try to move
-        if (_moveInput != Vector2.zero)
+        if (enableJump)
         {
-           bool success = TryMove(_moveInput);
-           
-           //Makes movement along collisions smoother
-           if (!success)
-           {
-               success = TryMove(new Vector2(_moveInput.x,0));
-
-               if (!success)
-               {
-                   success = TryMove(new Vector2(0, _moveInput.y));
-               }
-           }
+            // Platformer mode: preserve vertical physics so jump/fall continue naturally.
+            float targetVelocityX = _moveInput.x * currentMoveSpeed;
+            _rb.linearVelocity = new Vector2(targetVelocityX, _rb.linearVelocity.y);
+        }
+        else
+        {
+            // Top-down mode: WASD controls both axes directly.
+            _rb.linearVelocity = _moveInput * currentMoveSpeed;
         }
 
-        if (_jumpQueued)
+        if (enableJump && _jumpQueued)
         {
             Jump();
             _jumpQueued = false;
