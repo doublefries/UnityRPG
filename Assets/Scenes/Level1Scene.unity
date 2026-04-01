@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7099313639165137941, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -7099313639165137941, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_GravityScale
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 687258524}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: groundLayerMask.m_Bits
-      value: 64
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: movementFilter.useDepth
@@ -169,11 +169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8342056027575607875, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8342056027575607875, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 8342056027575607875, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 434484576}
   - component: {fileID: 434484575}
   - component: {fileID: 434484578}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,8 +255,8 @@ Transform:
   m_GameObject: {fileID: 434484573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1.3283983, y: 0.98962414, z: 1}
+  m_LocalPosition: {x: -0.09, y: 1.94, z: 0}
+  m_LocalScale: {x: 1.3283983, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1913405053}
@@ -2034,7 +2034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687258524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2050,7 +2050,7 @@ Transform:
   m_GameObject: {fileID: 687258523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.332, y: -0.357, z: 0}
+  m_LocalPosition: {x: -0.401, y: -0.291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2070,7 +2070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 845657104}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2105,7 @@ GameObject:
   - component: {fileID: 1511516584}
   - component: {fileID: 1511516583}
   - component: {fileID: 1511516582}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2121,7 +2121,7 @@ Transform:
   m_GameObject: {fileID: 1511516580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.61, y: -1.43, z: -5}
+  m_LocalPosition: {x: 2.49, y: -4.7, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2269,7 +2269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1913405053}
   - component: {fileID: 1913405052}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2313,7 +2313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1960743201}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: FloatingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2348,6 +2348,7 @@ GameObject:
   - component: {fileID: 1988505674}
   - component: {fileID: 1988505673}
   - component: {fileID: 1988505676}
+  - component: {fileID: 1988505677}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2424,7 +2425,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1368685e-13, y: 2, z: -20}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2473,6 +2474,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1988505677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988505672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb121368c19b4e34b288e6a745f1ca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EdgeScrollCamera
+  player: {fileID: 702616190}
+  horizontalMargin: 2.5
+  verticalMargin: 0
+  smoothSpeed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
