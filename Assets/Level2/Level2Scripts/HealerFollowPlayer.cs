@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class HealerFollowPlayer : MonoBehaviour
 {
+    
+    Animator animator;
+    
     //store the position of the player
     public Transform player;
     
@@ -9,9 +12,17 @@ public class HealerFollowPlayer : MonoBehaviour
     public float speed = 4f;
     public float followDistance = 1.5f;
 
+    void Start()
+    {
+        //Storing the position 
+        animator = GetComponent<Animator>();
+    }
+    
+    
     void Update()
     {
-            //Distance between player and healer 
+        
+        //Distance between player and healer 
             float distance = Vector2.Distance(transform.position, player.position);
 
             //When the healer is far away 
@@ -20,6 +31,16 @@ public class HealerFollowPlayer : MonoBehaviour
                 //Moves the healer 
                 Vector3 direction = (player.position - transform.position).normalized;
                 transform.position += direction * speed * Time.deltaTime;
+                
+                animator.SetBool("IsMoving", true);
             }
+            else
+            {
+                animator.SetBool("IsMoving", false);
+            }
+            
+        
+
+            
     }
 }
