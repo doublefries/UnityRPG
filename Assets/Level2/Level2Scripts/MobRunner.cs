@@ -6,6 +6,7 @@ public class MobRunner : MonoBehaviour
     public float topY = 4f;
     public float bottomY = -4f;
     public float speed = 2f;
+    public float PosX = 3;
     
     public bool movingDown = true;
 
@@ -36,4 +37,22 @@ public class MobRunner : MonoBehaviour
             }
         }
     }
+    
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            //Once hit, moves back up again so the cycle can continue again 
+            transform.position = new Vector3(PosX, 10f, 0f);
+            movingDown = true;
+        }
+        
+        if (collision.CompareTag("Healer"))
+        {
+            //Once hit, moves back up again so the cycle can continue again 
+            transform.position = new Vector3(PosX, 10f, 0f);
+            movingDown = true;
+        }
+    }
+    
 }
