@@ -42,6 +42,13 @@ public class MobRunner : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Health health = collision.GetComponent<Health>();
+
+            if (health != null)
+            {
+                health.TakeDamage(1);
+            }
+            
             //Once hit, moves back up again so the cycle can continue again 
             transform.position = new Vector3(PosX, 10f, 0f);
             movingDown = true;
@@ -49,6 +56,13 @@ public class MobRunner : MonoBehaviour
         
         if (collision.CompareTag("Healer"))
         {
+            
+            Health health = collision.GetComponent<Health>();
+
+            if (health != null)
+            {
+                health.TakeDamage(1);
+            }
             //Once hit, moves back up again so the cycle can continue again 
             transform.position = new Vector3(PosX, 10f, 0f);
             movingDown = true;

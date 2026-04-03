@@ -4,10 +4,16 @@ public class Health : MonoBehaviour
 {
     //The initial health 
     public int health = 3;
+    private bool isDead = false;
+    
 
     //Method to take damage
     public void TakeDamage(int amount)
     {
+        if (isDead) 
+        {
+            return;
+        }
         health -= amount;
         
         //to see current health 
@@ -15,8 +21,9 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            //failed level 
+            health = 0;
             Debug.Log(gameObject.name + " Died, Level failed ");
+            isDead = true;
         }
     }
 }
