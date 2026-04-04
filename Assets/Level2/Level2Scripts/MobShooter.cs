@@ -35,6 +35,9 @@ public class MobShooter : MonoBehaviour
                 movingRight = true;
             }
         }
+        
+      
     }
+    
     
 }
