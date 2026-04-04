@@ -7,9 +7,26 @@ public class ProgressionSystem : MonoBehaviour
     public int currentLevel = 1;
     public int ingredientsCollected = 0;
     public int totalIngredients = 5;
+    private static ProgressionSystem instance;
 
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    
+    
+    
+    
     public void AddCoins(int amount)
     {
+        Debug.Log("Coins: " + coins);
         coins += amount;
     }
 
