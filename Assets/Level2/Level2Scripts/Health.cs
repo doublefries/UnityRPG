@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class Health : MonoBehaviour
             health = 0;
             Debug.Log(gameObject.name + " Died, Level failed ");
             isDead = true;
+            SceneManager.LoadScene("IsometricScene");
         }
         
         UpdateHearts();
