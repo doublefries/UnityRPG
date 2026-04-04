@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    private Vined
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private VinedWall linkedWall;
+    [SerializeField] private Sprite pressedSprite; //For visual change after the pressure plate is used
+    
+    private bool _activated = false;
+    private SpriteRenderer _sr;
+    
     void Start()
     {
-        
+        _sr =  GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
         
     }
