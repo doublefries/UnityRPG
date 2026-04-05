@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ingredient : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Ingredient : MonoBehaviour
          
          Debug.Log("Ingredient collected");
          Destroy(gameObject);
+         ps.CompleteLevel();
+
+         SceneManager.LoadScene("IsometricScene");
       }
    }
 }
