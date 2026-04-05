@@ -9,6 +9,8 @@ public class TriggerGameEnd : MonoBehaviour
     [SerializeField] private float hiddenTime = 2f;
     [SerializeField] private float potionShowTime = 0.75f;
 
+    [SerializeField] private PortalExit portalToActivate;
+    
     private bool used = false;
 
     private void Start()
@@ -52,6 +54,9 @@ public class TriggerGameEnd : MonoBehaviour
 
         if (temporaryPotionVisual != null)
             temporaryPotionVisual.SetActive(true);
+        
+        if (portalToActivate != null)
+            portalToActivate.ActivatePortal();
 
         playerController.UnlockControl();
 
