@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>(); //list for the collisions that the ray cast finds
     
     Animator _animator;
+    
+    public Vector2 MoveInput => _moveInput; //Exposed for PlayerAttack to read facing direction
 
     void Start()
     {
