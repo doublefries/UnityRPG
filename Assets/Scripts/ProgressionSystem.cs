@@ -26,13 +26,15 @@ public class ProgressionSystem : MonoBehaviour
     
     public void AddCoins(int amount)
     {
-        Debug.Log("Coins: " + coins);
+        
         coins += amount;
+        Debug.Log("Coins: " + coins);
     }
 
     public void CollectIngredient()
     {
         ingredientsCollected++;
+        Debug.Log("Ingredients Collected: " + ingredientsCollected);
     }
 
     public bool AllIngredientsCollected()
@@ -42,10 +44,10 @@ public class ProgressionSystem : MonoBehaviour
     
     public void CompleteLevel()
     {
-        currentLevel++;
         
         //Print in the console 
         Debug.Log("Level completed, Currently at level " + currentLevel);
+        currentLevel++;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - GameManager
+  - Healer
   - PressurePlate
   layers:
   - Default
