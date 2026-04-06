@@ -15,4 +15,6 @@ public class RisingLava: MonoBehaviour
     {
         rb.MovePosition(rb.position + Vector2.up * riseSpeed * Time.fixedDeltaTime);
     }
+    
+    
 }
