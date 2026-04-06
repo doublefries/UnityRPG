@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheckPoint;
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayerMask;
+    [Header("Scene Movement Overrides")]
     [SerializeField] private bool enableJump = false;
     [SerializeField] private bool allowVerticalMovement = true;
     Rigidbody2D _rb;
@@ -24,15 +25,17 @@ public class PlayerMovement : MonoBehaviour
     List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>(); //list for the collisions that the ray cast finds
     
     Animator _animator;
-    
+
     public bool AllowVerticalMovement => allowVerticalMovement;
     public bool EnableJumps => enableJump;
-    
+
     public void SetMovementOptions(bool allowVertical, bool allowJump)
     {
         allowVerticalMovement = allowVertical;
         enableJump = allowJump;
     }
+
+    public Vector2 MoveInput => _moveInput;
 
     void Start()
     {

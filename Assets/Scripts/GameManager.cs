@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class GameManager : MonoBehaviour
   public Character[] characters; //Contains player and player blue
 
   public Character currentCharacter;
+  
+  [SerializeField] private string isometricSceneName = "isometricScene";
 
   private void Awake()
   {
@@ -18,6 +22,7 @@ public class GameManager : MonoBehaviour
     else
     {
       Destroy(gameObject); //If we already have a game manager, destroy the one we created
+      return;
     }
     
     DontDestroyOnLoad(gameObject); //Continue for when we swap scenes
@@ -34,5 +39,16 @@ public class GameManager : MonoBehaviour
   public void SetCharacter(Character character)
   {
       currentCharacter = character;
+  }
+
+  public void StartGame()
+  {
+    if (currentCharacter == null)
+    {
+      Debug.LogWarning("No character selected");
+      return;
+    }
+
+    SceneManager.LoadScene(isometricSceneName);
   }
 }
