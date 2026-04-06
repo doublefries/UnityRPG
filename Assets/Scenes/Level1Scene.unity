@@ -238,6 +238,10 @@ PrefabInstance:
       value: 8.25
       objectReference: {fileID: 0}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      propertyPath: enableJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: groundCheckPoint
       value: 
       objectReference: {fileID: 687258524}
