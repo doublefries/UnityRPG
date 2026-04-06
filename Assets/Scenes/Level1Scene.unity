@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: jumpForce
-      value: 7.5
+      value: 8.25
       objectReference: {fileID: 0}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: groundCheckPoint
@@ -2744,6 +2744,7 @@ MonoBehaviour:
   initialRiseSpeed: 0.35
   exponentialRate: 0.12
   maxRiseSpeed: 2.4
+  maxYPosition: 15
 --- !u!61 &527595746
 BoxCollider2D:
   m_ObjectHideFlags: 0
