@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Enemy
   maxHealth: 3
   attackDamage: 1
-  moveSpeed: 10
+  moveSpeed: 25
   attackRange: 1.5
   attackCooldown: 1
   detectionRange: 15
