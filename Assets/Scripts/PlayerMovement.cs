@@ -3,7 +3,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
-
 public class PlayerMovement : MonoBehaviour
 {
     // We remove the manual assignment of moveSpeed and let the Player class set it
@@ -22,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _moveInput;
     private bool _jumpQueued;
     public ContactFilter2D movementFilter;
-    List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>(); //list for the collisions that the ray cast finds
+    List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
     
     Animator _animator;
 
@@ -43,8 +42,6 @@ public class PlayerMovement : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _animator = GetComponent<Animator>(); 
     }
-
-    // Capture input in Update for better responsiveness
     void Update()
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -59,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimator();
     }
     
-    // Physics updates in FixedUpdate
     void FixedUpdate()
     {
         if (enableJump)
@@ -80,10 +76,8 @@ public class PlayerMovement : MonoBehaviour
             _jumpQueued = false;
         }
     }
-
-    private bool TryMove(Vector2 direction) //Better with handling collisions
+    private bool TryMove(Vector2 direction)
     {
-        //If we get count of 0, there are no collision, move is valid
         int count = _rb.Cast(direction, movementFilter, _castCollisions, currentMoveSpeed *Time.fixedDeltaTime + collisionOffset);
         Console.Write(count);
         if (count == 0)
@@ -109,12 +103,10 @@ public class PlayerMovement : MonoBehaviour
             _moveInput.y = 0f;
         }
     }
-
     void UpdateAnimator()
     {
         bool isMoving = _moveInput != Vector2.zero;
         _animator.SetBool("isMoving", isMoving);
-
         if (isMoving)
         {
             Vector2 normalizedInput = _moveInput.normalized;
