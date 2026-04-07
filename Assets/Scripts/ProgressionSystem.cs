@@ -3,7 +3,7 @@ using UnityEngine;
 public class ProgressionSystem : MonoBehaviour
 {
     public static ProgressionSystem Instance { get; private set; }
-    
+
     public int coins = 0;
     public int currentLevel = 1;
     public int ingredientsCollected = 0;
@@ -13,6 +13,7 @@ public class ProgressionSystem : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
+            Debug.Log("Duplicate ProgressionSystem destroyed on " + gameObject.name);
             Destroy(gameObject);
             return;
         }
@@ -20,7 +21,8 @@ public class ProgressionSystem : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        Debug.Log("ProgressionSystem Awake. currentLevel = " + currentLevel);
+        Debug.Log("ProgressionSystem Awake on " + gameObject.name +
+                  ". currentLevel = " + currentLevel);
     }
 
     public void AddCoins(int amount)
@@ -48,7 +50,7 @@ public class ProgressionSystem : MonoBehaviour
 
     public void CompleteLevel()
     {
-        Debug.Log("Level completed, Currently at level " + currentLevel);
         currentLevel++;
+        Debug.Log("Level completed. currentLevel is now " + currentLevel);
     }
 }

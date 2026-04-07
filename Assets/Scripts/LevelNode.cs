@@ -5,37 +5,70 @@ public class LevelNode : MonoBehaviour
 {
     [SerializeField] private int levelNumber = 1;
     [SerializeField] private string sceneToLoad;
-
-    private bool isUnlocked;
+    
+    [SerializeField] private GameObject lockIcon;
+    [SerializeField] private GameObject checkmarkIcon;
 
     private void Start()
     {
-        UpdateUnlockedState();
+        RefreshNode();
     }
 
-    public void UpdateUnlockedState()
+    private void OnEnable()
+    {
+        RefreshNode();
+    }
+
+    public void RefreshNode()
     {
         if (ProgressionSystem.Instance == null)
         {
-            Debug.LogWarning("No ProgressionSystem found in scene.");
+            Debug.LogWarning("No ProgressionSystem found for " + gameObject.name);
             return;
         }
 
-        isUnlocked = ProgressionSystem.Instance.IsLevelUnlocked(levelNumber);
+        bool isUnlocked = ProgressionSystem.Instance.IsLevelUnlocked(levelNumber);
+        bool isCompleted = levelNumber < ProgressionSystem.Instance.currentLevel;
 
-        // Optional: visually show locked/unlocked here
-        Debug.Log("Level " + levelNumber + " unlocked: " + isUnlocked);
+        Debug.Log(gameObject.name + " | levelNumber = " + levelNumber +
+                  " | currentLevel = " + ProgressionSystem.Instance.currentLevel +
+                  " | isUnlocked = " + isUnlocked +
+                  " | isCompleted = " + isCompleted);
+
+        if (lockIcon != null)
+            lockIcon.SetActive(!isUnlocked);
+
+        if (checkmarkIcon != null)
+            checkmarkIcon.SetActive(isCompleted);
     }
 
     private void OnMouseDown()
     {
+        if (ProgressionSystem.Instance == null)
+        {
+            Debug.LogWarning("No ProgressionSystem found when clicking " + gameObject.name);
+            return;
+        }
+
+        bool isUnlocked = ProgressionSystem.Instance.IsLevelUnlocked(levelNumber);
+
+        Debug.Log("Clicked " + gameObject.name +
+                  " | levelNumber = " + levelNumber +
+                  " | currentLevel = " + ProgressionSystem.Instance.currentLevel +
+                  " | isUnlocked = " + isUnlocked);
+
         if (!isUnlocked)
         {
             Debug.Log("Level " + levelNumber + " is locked.");
             return;
         }
 
-        Debug.Log("Loading scene: " + sceneToLoad);
+        if (string.IsNullOrWhiteSpace(sceneToLoad))
+        {
+            Debug.LogWarning("Scene name is empty on " + gameObject.name);
+            return;
+        }
+
         SceneManager.LoadScene(sceneToLoad);
     }
 }
