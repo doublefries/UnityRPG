@@ -373,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: jumpForce
-      value: 14
+      value: 8.25
       objectReference: {fileID: 0}
     - target: {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: enableJump
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Congrats! Return to Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8654,6 +8654,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084100271329065892, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1409155496617982626, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -8686,6 +8702,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1957074684}
+    - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
+      propertyPath: mainMenuSceneName
+      value: IsometricScene
+      objectReference: {fileID: 0}
     - target: {fileID: 1445034829627527820, guid: 7321688488ac99148929a2e4f7a39158, type: 3}
       propertyPath: dialogue.Array.size
       value: 4
