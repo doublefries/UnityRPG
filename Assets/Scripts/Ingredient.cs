@@ -16,7 +16,7 @@ public class Ingredient : MonoBehaviour
          
          Debug.Log("Ingredient collected");
          Destroy(gameObject);
-         ps.CompleteLevel();
+         ps.CompleteLevel(3);
 
          SceneManager.LoadScene("IsometricScene");
       }
