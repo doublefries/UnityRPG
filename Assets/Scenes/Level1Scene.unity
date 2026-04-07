@@ -3146,7 +3146,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 5e1b3fdd9823e0849bd594e8c5f87f08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0cfa846b033b0c4c9c81856f53a734b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10442,15 +10442,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988505672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb121368c19b4e34b288e6a745f1ca4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6698bed54c9244ba2aab44998481be5c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EdgeScrollCamera
+  m_EditorClassIdentifier: Assembly-CSharp::EdgeScrollCameraLevelOne
   player: {fileID: 702616190}
   fixedX: 0
-  yOffset: 0
+  yOffset: 2
   minY: 0
   maxY: 100
-  followSpeed: 4
+  followSpeed: 5
 --- !u!1001 &2002367034
 PrefabInstance:
   m_ObjectHideFlags: 0
