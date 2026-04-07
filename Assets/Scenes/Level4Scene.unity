@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a985ba77c36bda54c950e5535f83525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelEnd
-  nextSceneName: Level5Scene
+  nextSceneName: IsometricScene
 --- !u!61 &90487463
 BoxCollider2D:
   m_ObjectHideFlags: 0
