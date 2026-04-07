@@ -10,6 +10,7 @@ public class Endpoint : MonoBehaviour
             FindObjectOfType<ProgressionSystem>().CompleteLevel(2);
             FindObjectOfType<ProgressionSystem>().CollectIngredient();
 
+            ProgressionSystem.Instance.CompleteLevel(2);
             SceneManager.LoadScene("IsometricScene");
         }
     }
