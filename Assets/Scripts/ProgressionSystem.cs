@@ -7,15 +7,34 @@ public class ProgressionSystem : MonoBehaviour
     public int currentLevel = 1;
     public int ingredientsCollected = 0;
     public int totalIngredients = 5;
+    private static ProgressionSystem instance;
 
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    
+    
+    
+    
     public void AddCoins(int amount)
     {
+        
         coins += amount;
+        Debug.Log("Coins: " + coins);
     }
 
     public void CollectIngredient()
     {
         ingredientsCollected++;
+        Debug.Log("Ingredients Collected: " + ingredientsCollected);
     }
 
     public bool AllIngredientsCollected()
@@ -25,10 +44,10 @@ public class ProgressionSystem : MonoBehaviour
     
     public void CompleteLevel()
     {
-        currentLevel++;
         
         //Print in the console 
         Debug.Log("Level completed, Currently at level " + currentLevel);
+        currentLevel++;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
