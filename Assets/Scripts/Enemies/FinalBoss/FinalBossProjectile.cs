@@ -12,29 +12,31 @@ public class FinalBossProjectile : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log("Projectile Awake");
     }
 
     private void Start()
     {
-        Debug.Log("Projectile Start. Lifetime = " + lifetime);
         Destroy(gameObject, lifetime);
     }
 
-    public void Initialize(Vector2 direction)
+    public void Initialize(Vector2 direction, GameObject owner)
     {
         moveDirection = direction.normalized;
-        Debug.Log("Projectile initialized. Direction = " + moveDirection);
+        
+        Collider2D[] projectileColliders = GetComponentsInChildren<Collider2D>();
+        Collider2D[] ownerColliders = owner.GetComponentsInChildren<Collider2D>();
+
+        foreach (Collider2D projectileCol in projectileColliders)
+        {
+            foreach (Collider2D ownerCol in ownerColliders)
+            {
+                Physics2D.IgnoreCollision(projectileCol, ownerCol, true);
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         rb.linearVelocity = moveDirection * speed;
-        Debug.Log("Projectile velocity = " + rb.linearVelocity);
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log("Projectile destroyed");
     }
 }

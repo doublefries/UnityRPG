@@ -17,7 +17,6 @@ public class BossEnemy : MeleeEnemy
 
     public void StartFight()
     {
-        Debug.Log("Boss fight started");
 
         if (fightStarted || !isAlive)
             return;
@@ -39,7 +38,6 @@ public class BossEnemy : MeleeEnemy
 
     private void TryShoot()
     {
-        Debug.Log("TryShoot called");
 
         if (playerTarget == null || projectilePrefab == null || firePoint == null)
             return;
@@ -54,10 +52,8 @@ public class BossEnemy : MeleeEnemy
 
         Vector2 direction = (playerTarget.position - firePoint.position).normalized;
         
-        Debug.Log("Boss fired projectile");
         FinalBossProjectile projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-        Debug.Log("Projectile spawned");
-        projectile.Initialize(direction);
+        projectile.Initialize(direction, gameObject);
 
         lastShotTime = Time.time;
     }
