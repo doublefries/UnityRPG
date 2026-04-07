@@ -4,6 +4,7 @@ using UnityEngine;
 public class BossFightTrigger : MonoBehaviour
 {
     [SerializeField] private BossEnemy boss;
+    [SerializeField] private BossHealthBarUI bossHealthBarUI;
 
     private bool triggered = false;
 
@@ -28,5 +29,10 @@ public class BossFightTrigger : MonoBehaviour
         {
             Debug.LogWarning("Boss reference is missing.");
         }
-    }
+
+        if (bossHealthBarUI != null)
+        {
+            bossHealthBarUI.ShowBar();
+        }
+}
 }
