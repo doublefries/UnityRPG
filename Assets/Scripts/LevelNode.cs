@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelNode : MonoBehaviour
 {
-    [SerializeField] private int levelNumber;
+    [SerializeField] private int levelNumber = 1;
     [SerializeField] private string sceneToLoad;
 
     private bool isUnlocked;

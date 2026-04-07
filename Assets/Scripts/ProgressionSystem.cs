@@ -2,37 +2,33 @@ using UnityEngine;
 
 public class ProgressionSystem : MonoBehaviour
 {
-    
     public static ProgressionSystem Instance { get; private set; }
     
-    //Variables 
     public int coins = 0;
     public int currentLevel = 1;
     public int ingredientsCollected = 0;
     public int totalIngredients = 5;
-    private static ProgressionSystem instance;
 
-    void Awake()
+    private void Awake()
     {
-        if (instance != null && instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        Debug.Log("ProgressionSystem Awake. currentLevel = " + currentLevel);
     }
-    
-    
-    
+
     public void AddCoins(int amount)
     {
-        
         coins += amount;
         Debug.Log("Coins: " + coins);
     }
-    
+
     public void CollectIngredient()
     {
         ingredientsCollected++;
@@ -43,16 +39,15 @@ public class ProgressionSystem : MonoBehaviour
     {
         return ingredientsCollected >= totalIngredients;
     }
-    
+
     public bool IsLevelUnlocked(int levelNumber)
     {
+        Debug.Log("Checking unlock: levelNumber = " + levelNumber + ", currentLevel = " + currentLevel);
         return levelNumber <= currentLevel;
     }
-    
+
     public void CompleteLevel()
     {
-        
-        //Print in the console 
         Debug.Log("Level completed, Currently at level " + currentLevel);
         currentLevel++;
     }

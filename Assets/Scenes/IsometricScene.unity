@@ -3153,7 +3153,7 @@ GameObject:
   - component: {fileID: 1025633472}
   - component: {fileID: 1025633471}
   - component: {fileID: 1025633474}
-  - component: {fileID: 1025633473}
+  - component: {fileID: 1025633475}
   m_Layer: 0
   m_Name: IsoMapLayer3
   m_TagString: Untagged
@@ -4064,19 +4064,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1025633473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025633469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4a2b752fb4e47f7929cc03dc6c2fec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneClickTarget
-  sceneToLoad: Level2Scene
 --- !u!65 &1025633474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4098,6 +4085,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.31, y: 3.73, z: 1}
   m_Center: {x: -6.48, y: -2.34, z: 0.5}
+--- !u!114 &1025633475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025633469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9275e86c6a69f4c3c83fe47d11a02524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNode
+  levelNumber: 2
+  sceneToLoad: Level2Scene
 --- !u!1 &1032069427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,6 +4968,8 @@ GameObject:
   - component: {fileID: 1063890903}
   - component: {fileID: 1063890905}
   - component: {fileID: 1063890904}
+  - component: {fileID: 1063890907}
+  - component: {fileID: 1063890906}
   m_Layer: 0
   m_Name: IsoMapLayer6
   m_TagString: Untagged
@@ -5641,6 +5644,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1063890906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063890902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9275e86c6a69f4c3c83fe47d11a02524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNode
+  levelNumber: 4
+  sceneToLoad: Level4Scene
+--- !u!61 &1063890907
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063890902}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 3.86, y: 1.49}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.64, y: 2.92}
+  m_EdgeRadius: 0
 --- !u!1001 &1106272802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5801,6 +5864,8 @@ GameObject:
   - component: {fileID: 1331688962}
   - component: {fileID: 1331688964}
   - component: {fileID: 1331688963}
+  - component: {fileID: 1331688966}
+  - component: {fileID: 1331688965}
   m_Layer: 0
   m_Name: IsoMapLayer8
   m_TagString: Untagged
@@ -6621,6 +6686,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1331688965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331688961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9275e86c6a69f4c3c83fe47d11a02524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNode
+  levelNumber: 5
+  sceneToLoad: Level5Scene
+--- !u!61 &1331688966
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331688961}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 5.04, y: -2.58}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.97, y: 4.29}
+  m_EdgeRadius: 0
 --- !u!1001 &1411144221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7583,8 +7708,8 @@ GameObject:
   - component: {fileID: 1498845490}
   - component: {fileID: 1498845492}
   - component: {fileID: 1498845491}
-  - component: {fileID: 1498845494}
   - component: {fileID: 1498845493}
+  - component: {fileID: 1498845495}
   m_Layer: 0
   m_Name: IsoMapLayer1
   m_TagString: Untagged
@@ -8426,7 +8551,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.47, y: 3.6, z: 1}
   m_Center: {x: -6.16, y: 2.02, z: 0.5}
---- !u!114 &1498845494
+--- !u!114 &1498845495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8435,9 +8560,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498845489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4a2b752fb4e47f7929cc03dc6c2fec, type: 3}
+  m_Script: {fileID: 11500000, guid: 9275e86c6a69f4c3c83fe47d11a02524, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneClickTarget
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNode
+  levelNumber: 1
   sceneToLoad: Level1Scene
 --- !u!1001 &1627304491
 PrefabInstance:
@@ -8721,6 +8847,8 @@ GameObject:
   - component: {fileID: 1929725826}
   - component: {fileID: 1929725828}
   - component: {fileID: 1929725827}
+  - component: {fileID: 1929725830}
+  - component: {fileID: 1929725829}
   m_Layer: 0
   m_Name: IsoMapLayer5
   m_TagString: Untagged
@@ -9527,6 +9655,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1929725829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929725825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9275e86c6a69f4c3c83fe47d11a02524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelNode
+  levelNumber: 3
+  sceneToLoad: Level3Scene
+--- !u!61 &1929725830
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929725825}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.1, y: -0.09}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.48, y: 3.73}
+  m_EdgeRadius: 0
 --- !u!1001 &2004095748
 PrefabInstance:
   m_ObjectHideFlags: 0
