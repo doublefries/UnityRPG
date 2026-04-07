@@ -8,48 +8,72 @@ public class PlayerMovement : MonoBehaviour
     // We remove the manual assignment of moveSpeed and let the Player class set it
     public float currentMoveSpeed = 1f;
     public float collisionOffset = 0.05f;
+    [Header("Jump")]
+    [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private Transform groundCheckPoint;
+    [SerializeField] private float groundCheckRadius = 0.2f;
+    [SerializeField] private LayerMask groundLayerMask;
+    [Header("Scene Movement Overrides")]
+    [SerializeField] private bool enableJump = false;
+    [SerializeField] private bool allowVerticalMovement = true;
     Rigidbody2D _rb;
+    private Collider2D _collider;
     private Vector2 _moveInput;
+    private bool _jumpQueued;
     public ContactFilter2D movementFilter;
     List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
     
     Animator _animator;
-    
-    // Reference to ice physics — null on levels without ice
-    private IcePhysicsController _iceController;
-    
+
+    public bool AllowVerticalMovement => allowVerticalMovement;
+    public bool EnableJumps => enableJump;
+
+    public void SetMovementOptions(bool allowVertical, bool allowJump)
+    {
+        allowVerticalMovement = allowVertical;
+        enableJump = allowJump;
+    }
+
     public Vector2 MoveInput => _moveInput;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
-        _iceController = GetComponent<IcePhysicsController>();
+        _collider = GetComponent<Collider2D>();
+        _animator = GetComponent<Animator>(); 
     }
     void Update()
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
         _moveInput.y = Input.GetAxisRaw("Vertical");
+        ApplyMovementRestrictions();
+
+        if (enableJump && Input.GetButtonDown("Jump"))
+        {
+            _jumpQueued = true;
+        }
         
         UpdateAnimator();
     }
     
     void FixedUpdate()
     {
-        // If on ice, IcePhysicsController handles movement — skip normal movement
-        if (_iceController != null && _iceController.IsSliding) return;
-
-        if (_moveInput != Vector2.zero)
+        if (enableJump)
         {
-           bool success = TryMove(_moveInput);
-           
-           if (!success)
-           {
-               success = TryMove(new Vector2(_moveInput.x,0));
-               if (!success)
-               {
-                   success = TryMove(new Vector2(0, _moveInput.y));
-               }
-           }
+            // Platformer mode: preserve vertical physics so jump/fall continue naturally.
+            float targetVelocityX = _moveInput.x * currentMoveSpeed;
+            _rb.linearVelocity = new Vector2(targetVelocityX, _rb.linearVelocity.y);
+        }
+        else
+        {
+            // Top-down mode: WASD controls both axes directly.
+            _rb.linearVelocity = _moveInput * currentMoveSpeed;
+        }
+
+        if (enableJump && _jumpQueued)
+        {
+            Jump();
+            _jumpQueued = false;
         }
     }
     private bool TryMove(Vector2 direction)
@@ -69,6 +93,15 @@ public class PlayerMovement : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         _moveInput = movementValue.Get<Vector2>();
+        ApplyMovementRestrictions();
+    }
+
+    private void ApplyMovementRestrictions()
+    {
+        if (!allowVerticalMovement)
+        {
+            _moveInput.y = 0f;
+        }
     }
     void UpdateAnimator()
     {
@@ -80,5 +113,35 @@ public class PlayerMovement : MonoBehaviour
             _animator.SetFloat("MoveX", normalizedInput.x);
             _animator.SetFloat("MoveY", normalizedInput.y);
         }
+    }
+
+    public bool CheckGrounded()
+    {
+        bool groundedByCheckPoint = false;
+        if (groundCheckPoint != null)
+        {
+            groundedByCheckPoint = Physics2D.OverlapCircle(
+                groundCheckPoint.position,
+                groundCheckRadius,
+                groundLayerMask
+            );
+        }
+
+        // Also allow jumping when the player collider is touching valid ground layers.
+        // This helps with moving/floating platforms while still respecting the layer mask.
+        bool groundedByCollider = _collider != null && _collider.IsTouchingLayers(groundLayerMask);
+        return groundedByCheckPoint || groundedByCollider;
+    }
+
+    public void Jump()
+    {
+        if (!CheckGrounded())
+        {
+            Debug.Log("Not grounded");
+            return;
+        }
+
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0f);
+        _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 }
