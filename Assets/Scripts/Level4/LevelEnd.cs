@@ -17,7 +17,7 @@ public class LevelEnd : MonoBehaviour
         if (progression != null)
         {
             progression.CollectIngredient();
-            progression.CompleteLevel();
+            progression.CompleteLevel(4);
         }
 
         // Load next level

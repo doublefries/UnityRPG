@@ -48,11 +48,16 @@ public class ProgressionSystem : MonoBehaviour
         return levelNumber <= currentLevel;
     }
 
-    public void CompleteLevel(int completedLevelNumber )
+    public void CompleteLevel(int completedLevelNumber)
     {
+        Debug.Log("CompleteLevel called with level " + completedLevelNumber + ". Before update, currentLevel = " + currentLevel);
         if (completedLevelNumber >= currentLevel)
         {
             currentLevel = completedLevelNumber + 1;
+            Debug.Log("Level " + completedLevelNumber + " completed. currentLevel is now " + currentLevel);
+        }
+        else{
+            Debug.Log("Level " + completedLevelNumber + " was already completed. currentLevel remains " + currentLevel);
         }
     }
 }

@@ -11,6 +11,9 @@ public class PortalExit : MonoBehaviour
     [SerializeField] private float enterDelay = 0.4f;
     [SerializeField] private bool startActive = false;
 
+    [Header("Progression")]
+    [SerializeField] private int levelNumber = 5;
+
     private bool portalActive = false;
     private bool used = false;
 
@@ -67,6 +70,16 @@ public class PortalExit : MonoBehaviour
         playerController.SetVisible(false);
 
         yield return new WaitForSeconds(enterDelay);
+
+        if (ProgressionSystem.Instance != null)
+        {
+            ProgressionSystem.Instance.CompleteLevel(levelNumber);
+            Debug.Log("After CompleteLevel, currentLevel = " + ProgressionSystem.Instance.currentLevel);
+        }
+        else
+        {
+            Debug.LogWarning("No ProgressionSystem found when completing level " + levelNumber);
+        }
 
         SceneManager.LoadScene(nextSceneName);
     }
