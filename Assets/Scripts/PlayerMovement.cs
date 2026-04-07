@@ -3,7 +3,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
-
 public class PlayerMovement : MonoBehaviour
 {
     // We remove the manual assignment of moveSpeed and let the Player class set it
@@ -12,19 +11,20 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D _rb;
     private Vector2 _moveInput;
     public ContactFilter2D movementFilter;
-    List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>(); //list for the collisions that the ray cast finds
+    List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
     
     Animator _animator;
     
-    public Vector2 MoveInput => _moveInput; //Exposed for PlayerAttack to read facing direction
-
+    // Reference to ice physics — null on levels without ice
+    private IcePhysicsController _iceController;
+    
+    public Vector2 MoveInput => _moveInput;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>(); 
+        _animator = GetComponent<Animator>();
+        _iceController = GetComponent<IcePhysicsController>();
     }
-
-    // Capture input in Update for better responsiveness
     void Update()
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -33,19 +33,18 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimator();
     }
     
-    // Physics updates in FixedUpdate
     void FixedUpdate()
     {
-        //If movement input is not 0 player will try to move
+        // If on ice, IcePhysicsController handles movement — skip normal movement
+        if (_iceController != null && _iceController.IsSliding) return;
+
         if (_moveInput != Vector2.zero)
         {
            bool success = TryMove(_moveInput);
            
-           //Makes movement along collisions smoother
            if (!success)
            {
                success = TryMove(new Vector2(_moveInput.x,0));
-
                if (!success)
                {
                    success = TryMove(new Vector2(0, _moveInput.y));
@@ -53,10 +52,8 @@ public class PlayerMovement : MonoBehaviour
            }
         }
     }
-
-    private bool TryMove(Vector2 direction) //Better with handling collisions
+    private bool TryMove(Vector2 direction)
     {
-        //If we get count of 0, there are no collision, move is valid
         int count = _rb.Cast(direction, movementFilter, _castCollisions, currentMoveSpeed *Time.fixedDeltaTime + collisionOffset);
         Console.Write(count);
         if (count == 0)
@@ -73,12 +70,10 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveInput = movementValue.Get<Vector2>();
     }
-
     void UpdateAnimator()
     {
         bool isMoving = _moveInput != Vector2.zero;
         _animator.SetBool("isMoving", isMoving);
-
         if (isMoving)
         {
             Vector2 normalizedInput = _moveInput.normalized;
