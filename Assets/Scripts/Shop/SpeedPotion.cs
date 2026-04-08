@@ -14,6 +14,8 @@ public class SpeedPotion : Potion
     public override void ApplyEffect(PlayerStats player)
     {
         player.IncreaseSpeed(SpeedBoost);
+        if (ProgressionSystem.Instance != null)
+            ProgressionSystem.Instance.AddSpeedBonus(SpeedBoost);
         Debug.Log($"Bought {ItemName}. Speed +{SpeedBoost}");
     }
 }
