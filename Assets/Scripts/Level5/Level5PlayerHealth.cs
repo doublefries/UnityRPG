@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    [SerializeField] private int maxHealth = 5;
+    [SerializeField] private int maxHealth = 10;
     [SerializeField] private Level1UIManager uiManager;
     [SerializeField] private FallingTiles fallingTiles;
 
