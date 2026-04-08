@@ -4,82 +4,43 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private float attackCooldown = 0.3f;
-    [SerializeField] private float hitboxActiveTime = 0.12f;
-
-    [SerializeField] private GameObject hitboxUp;
-    [SerializeField] private GameObject hitboxDown;
-    [SerializeField] private GameObject hitboxLeft;
-    [SerializeField] private GameObject hitboxRight;
-
     private Animator _animator;
     private PlayerMovement _movement;
-    private bool _isAttacking = false;
+    private bool _isAttacking = false; //flag to prevent from attack spam
 
-    private void Start()
+    void Start()
     {
         _animator = GetComponent<Animator>();
         _movement = GetComponent<PlayerMovement>();
-
-        DisableAllHitboxes();
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !_isAttacking)
+        if (Input.GetKeyDown(KeyCode.F) && !_isAttacking) //player has pressed f and is not already mid-attack
         {
             _isAttacking = true;
-
-            Vector2 moveInput = _movement.MoveInput;
+            
+            Vector2 moveInput = _movement.MoveInput; //read the current movement direction from player movement via the public property
 
             if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
             {
                 _animator.SetFloat("MoveX", moveInput.x > 0 ? 1 : -1);
                 _animator.SetFloat("MoveY", 0);
             }
-            else if (moveInput != Vector2.zero)
+            else if (moveInput != Vector2.zero) //if player is standing still animator keeps last set direction
             {
                 _animator.SetFloat("MoveX", 0);
-                _animator.SetFloat("MoveY", moveInput.y > 0 ? 1 : -1);
+                _animator.SetFloat("MoveY", moveInput.y >  0 ? 1 : -1);
             }
-
+            
             _animator.SetTrigger("Attack");
-            StartCoroutine(DoAttack());
+            StartCoroutine(ResetAttack());
         }
     }
 
-    private IEnumerator DoAttack()
+    private IEnumerator ResetAttack()
     {
-        GameObject activeHitbox = GetCurrentHitbox();
-
-        if (activeHitbox != null)
-            activeHitbox.SetActive(true);
-
-        yield return new WaitForSeconds(hitboxActiveTime);
-
-        if (activeHitbox != null)
-            activeHitbox.SetActive(false);
-
         yield return new WaitForSeconds(attackCooldown);
-
         _isAttacking = false;
-    }
-
-    private GameObject GetCurrentHitbox()
-    {
-        float moveX = _animator.GetFloat("MoveX");
-        float moveY = _animator.GetFloat("MoveY");
-
-        if (moveX > 0) return hitboxRight;
-        if (moveX < 0) return hitboxLeft;
-        if (moveY > 0) return hitboxUp;
-        return hitboxDown;
-    }
-
-    private void DisableAllHitboxes()
-    {
-        if (hitboxUp != null) hitboxUp.SetActive(false);
-        if (hitboxDown != null) hitboxDown.SetActive(false);
-        if (hitboxLeft != null) hitboxLeft.SetActive(false);
-        if (hitboxRight != null) hitboxRight.SetActive(false);
     }
 }
