@@ -141,6 +141,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   currentMoveSpeed: 5
   collisionOffset: 0.05
+  jumpForce: 7
+  groundCheckPoint: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enableJump: 0
+  allowVerticalMovement: 1
   movementFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -203,7 +211,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1892841981321722895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -263,3 +271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   attackCooldown: 0.3
+  hitboxActiveTime: 0.12
+  hitboxUp: {fileID: 0}
+  hitboxDown: {fileID: 0}
+  hitboxLeft: {fileID: 0}
+  hitboxRight: {fileID: 0}
