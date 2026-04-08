@@ -3,7 +3,7 @@ using UnityEngine;
 public class EdgeScrollCamera : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    
+
     // dead zone margins
     [SerializeField] private float horizontalMargin = 2.5f;
     [SerializeField] private float verticalMargin = 1.5f;
@@ -20,7 +20,7 @@ public class EdgeScrollCamera : MonoBehaviour
     private void LateUpdate()
     {
         if (player == null) return;
-        
+
         float camX = transform.position.x;
         float camY = transform.position.y;
 
