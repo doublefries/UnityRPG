@@ -39,7 +39,7 @@ public class Level1UIManager : MonoBehaviour
     public void RetryLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Level1Scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void BackToMainMenu()
