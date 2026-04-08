@@ -3,8 +3,10 @@ using UnityEngine.UI;
 
 public class CharacterSelectionUI : MonoBehaviour
 {
-    [SerializeField] private GameObject optionPrefab;
-    [SerializeField] private Character[] characters;
+    public GameObject optionPrefab;
+    public Transform prevCharacter;
+    public Transform selectedCharacter;
+
     [SerializeField] private Button startButton; //dragging start button here
 
     private void Start()
@@ -14,15 +16,20 @@ public class CharacterSelectionUI : MonoBehaviour
         {
             startButton.interactable = false;
         }
-        foreach (Character c in characters)
+        foreach (Character c in GameManager.instance.characters)
         {
-            Character localChar = c;
             GameObject option = Instantiate(optionPrefab, transform);
             Button button = option.GetComponent<Button>(); //Button on each character option
             
             button.onClick.AddListener(() =>
             {
-                GameManager.instance.SelectCharacter(localChar);
+                GameManager.instance.SetCharacter(c);
+                if (selectedCharacter != null)
+                {
+                    prevCharacter = selectedCharacter; //For Animation
+                }
+                
+                selectedCharacter = option.transform; 
                 
                 //Enable once character is picked
                 if (startButton != null)
@@ -32,10 +39,10 @@ public class CharacterSelectionUI : MonoBehaviour
             });
             
             Text text =  option.GetComponentInChildren<Text>();
-            text.text = localChar.name; //set text to that characters name
+            text.text = c.name; //set text to that characters name
             
             Image image = option.GetComponentInChildren<Image>();
-            image.sprite = localChar.icon;
+            image.sprite = c.icon;
         }
         //Wire to game manager
         if (startButton != null){
