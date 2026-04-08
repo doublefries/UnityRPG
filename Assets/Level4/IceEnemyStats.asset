@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Ice Enemy
   maxHealth: 3
   attackDamage: 1
-  moveSpeed: 3
+  moveSpeed: 6
   attackRange: 1.5
   attackCooldown: 1
   detectionRange: 5
