@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3734328144356541292}
   - component: {fileID: 1145304753113516453}
   - component: {fileID: -9175656658002097904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 9128384846270689552, guid: b0da10cd45843f748b83f428e40ebd52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
