@@ -56,27 +56,18 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimator();
     }
     
-    private float EffectiveMoveSpeed
-    {
-        get
-        {
-            float bonus = ProgressionSystem.Instance != null ? ProgressionSystem.Instance.speedBonus : 0f;
-            return currentMoveSpeed + bonus;
-        }
-    }
-
     void FixedUpdate()
     {
-        float speed = EffectiveMoveSpeed;
-
         if (enableJump)
         {
-            float targetVelocityX = _moveInput.x * speed;
+            // Platformer mode: preserve vertical physics so jump/fall continue naturally.
+            float targetVelocityX = _moveInput.x * currentMoveSpeed;
             _rb.linearVelocity = new Vector2(targetVelocityX, _rb.linearVelocity.y);
         }
         else
         {
-            _rb.linearVelocity = _moveInput * speed;
+            // Top-down mode: WASD controls both axes directly.
+            _rb.linearVelocity = _moveInput * currentMoveSpeed;
         }
 
         if (enableJump && _jumpQueued)
@@ -87,12 +78,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool TryMove(Vector2 direction)
     {
-        float speed = EffectiveMoveSpeed;
-        int count = _rb.Cast(direction, movementFilter, _castCollisions, speed * Time.fixedDeltaTime + collisionOffset);
+        int count = _rb.Cast(direction, movementFilter, _castCollisions, currentMoveSpeed *Time.fixedDeltaTime + collisionOffset);
         Console.Write(count);
         if (count == 0)
         {
-            _rb.MovePosition(_rb.position + (direction * speed * Time.fixedDeltaTime));
+            _rb.MovePosition(_rb.position + (direction * currentMoveSpeed * Time.fixedDeltaTime));
             return true;
         }
         else
