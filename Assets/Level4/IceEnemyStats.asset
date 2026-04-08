@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7db7857d20f5e446b24c6a31932059f, type: 3}
   m_Name: IceEnemyStats
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStatsSO
-  enemyName: Enemy
+  enemyName: Ice Enemy
   maxHealth: 3
   attackDamage: 1
-  moveSpeed: 2
+  moveSpeed: 3
   attackRange: 1.5
   attackCooldown: 1
   detectionRange: 8
