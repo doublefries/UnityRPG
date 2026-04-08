@@ -9,6 +9,9 @@ public class ProgressionSystem : MonoBehaviour
     public int ingredientsCollected = 0;
     public int totalIngredients = 5;
 
+    public float speedBoost = 0f;
+    public int strengthBoost = 0;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -29,6 +32,27 @@ public class ProgressionSystem : MonoBehaviour
     {
         coins += amount;
         Debug.Log("Coins: " + coins);
+    }
+
+    public bool SpendCoins(int amount)
+    {
+        if (coins < amount)
+            return false;
+
+        coins -= amount;
+        return true;
+    }
+
+    public void IncreaseSpeed(float amount)
+    {
+        speedBoost += amount;
+        Debug.Log("Speed Boost is now: " + speedBoost);
+    }
+
+    public void IncreaseStrength(int amount)
+    {
+        strengthBoost += amount;
+        Debug.Log("Strength Boost is now: " + strengthBoost);
     }
 
     public void CollectIngredient()

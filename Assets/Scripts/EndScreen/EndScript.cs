@@ -12,6 +12,8 @@ public class EndSceneRestartButton : MonoBehaviour
             ProgressionSystem.Instance.currentLevel = 1;
             ProgressionSystem.Instance.coins = 0;
             ProgressionSystem.Instance.ingredientsCollected = 0;
+            ProgressionSystem.Instance.speedBoost = 0f;
+            ProgressionSystem.Instance.strengthBoost = 0;
 
             Debug.Log("Progress reset. currentLevel = 1");
         }
