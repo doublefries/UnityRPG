@@ -14,8 +14,6 @@ public class StrengthPotion : Potion
     public override void ApplyEffect(PlayerStats player)
     {
         player.IncreaseStrength(StrengthBoost);
-        if (ProgressionSystem.Instance != null)
-            ProgressionSystem.Instance.AddStrengthBonus(StrengthBoost);
         Debug.Log($"Bought {ItemName}. Strength +{StrengthBoost}");
     }
 }
