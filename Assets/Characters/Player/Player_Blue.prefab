@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7099313639165137941}
   - component: {fileID: 1892841981321722895}
   - component: {fileID: 8020123749679580857}
-  - component: {fileID: -3421174081095962362}
+  - component: {fileID: 6481827844991691996}
   m_Layer: 0
   m_Name: Player_Blue
   m_TagString: Player
@@ -277,7 +277,7 @@ MonoBehaviour:
   hitboxDown: {fileID: 0}
   hitboxLeft: {fileID: 0}
   hitboxRight: {fileID: 0}
---- !u!114 &-3421174081095962362
+--- !u!114 &6481827844991691996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
