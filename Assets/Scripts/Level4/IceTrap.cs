@@ -16,7 +16,5 @@ public class IceTrap : MonoBehaviour
             target.TakeDamage(damage);
             Debug.Log("Trap hit player for " + damage + " damage");
         }
-
-        Destroy(gameObject);
     }
 }
