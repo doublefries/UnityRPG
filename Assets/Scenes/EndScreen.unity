@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2169cf6ad384cdd9c4a1ce4dc31bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndSceneRestartButton
-  targetSceneName: IsometricScene
+  targetSceneName: StartScreen
 --- !u!1 &1531179478
 GameObject:
   m_ObjectHideFlags: 0
