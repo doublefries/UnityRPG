@@ -16,13 +16,11 @@ public class Level4PlayerHealth : MonoBehaviour, IDamageable
 
     private bool isAlive = true;
     private bool isInvincible = false;
-    private Vector3 spawnPoint;
     private SpriteRenderer[] spriteRenderers;
 
     private void Awake()
     {
         CurrentHealth = maxHealth;
-        spawnPoint = transform.position;
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
     }
 
@@ -48,22 +46,27 @@ public class Level4PlayerHealth : MonoBehaviour, IDamageable
     {
         if (!isAlive) return;
 
+        CurrentHealth = 0;
         isAlive = false;
-        Debug.Log("Player died!");
-        OnDeath?.Invoke();
-
-        Respawn();
-    }
-
-    private void Respawn()
-    {
-        transform.position = spawnPoint;
-        CurrentHealth = maxHealth;
-        isAlive = true;
         isInvincible = false;
 
         SetSpritesVisible(true);
         OnHealthChanged?.Invoke(CurrentHealth);
+
+        Debug.Log(gameObject.name + " died, Level failed");
+
+        OnDeath?.Invoke();
+
+        Level1UIManager ui = FindObjectOfType<Level1UIManager>();
+
+        if (ui != null)
+        {
+            ui.PlayerDied();
+        }
+        else
+        {
+            Debug.LogWarning("Level1UIManager not found in scene.");
+        }
     }
 
     private IEnumerator InvincibilityFlash()
