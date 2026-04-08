@@ -547,13 +547,16 @@ MonoBehaviour:
   - prefab: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
     name: Ember
     icon: {fileID: 9128384846270689552, guid: 8921388d16b25b54999ae6db77bb0ba0, type: 3}
+    animatorController: {fileID: 9100000, guid: 9b4d8295ee6ff4c42ab5bf5a0d9be733, type: 2}
   - prefab: {fileID: 6114917693223715754, guid: 7b0dda8dcea33ef489a46c470365c3d1, type: 3}
     name: Cobalt
     icon: {fileID: 9128384846270689552, guid: 01a970e5b78787443b402adc3cf1efc0, type: 3}
+    animatorController: {fileID: 22100000, guid: 52e53d5b813b37c40b0824f6ed51a961, type: 2}
   currentCharacter:
     prefab: {fileID: 0}
     name: 
     icon: {fileID: 0}
+    animatorController: {fileID: 0}
   isometricSceneName: isometricScene
 --- !u!4 &1053759623
 Transform:
