@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -7099313639165137941}
   - component: {fileID: 3734328144356541292}
   - component: {fileID: 1145304753113516453}
+  - component: {fileID: 4865679071680889978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -276,3 +277,15 @@ MonoBehaviour:
   hitboxDown: {fileID: 0}
   hitboxLeft: {fileID: 0}
   hitboxRight: {fileID: 0}
+--- !u!114 &4865679071680889978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114917693223715754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ad4d2cdef8ea14e9ee3c330bfff362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterAppearance
