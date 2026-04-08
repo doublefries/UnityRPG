@@ -7,10 +7,9 @@ public class Endpoint : MonoBehaviour
     {
         if (other.CompareTag("Healer"))
         {
-            FindObjectOfType<ProgressionSystem>().CompleteLevel(2);
+            FindObjectOfType<ProgressionSystem>().CompleteLevel();
             FindObjectOfType<ProgressionSystem>().CollectIngredient();
 
-            ProgressionSystem.Instance.CompleteLevel(2);
             SceneManager.LoadScene("IsometricScene");
         }
     }

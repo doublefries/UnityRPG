@@ -2,31 +2,31 @@ using UnityEngine;
 
 public class ProgressionSystem : MonoBehaviour
 {
-    public static ProgressionSystem Instance { get; private set; }
-
+    //Variables 
     public int coins = 0;
     public int currentLevel = 1;
     public int ingredientsCollected = 0;
     public int totalIngredients = 5;
+    private static ProgressionSystem instance;
 
-    private void Awake()
+    void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (instance != null && instance != this)
         {
-            Debug.Log("Duplicate ProgressionSystem destroyed on " + gameObject.name);
             Destroy(gameObject);
             return;
         }
 
-        Instance = this;
+        instance = this;
         DontDestroyOnLoad(gameObject);
-
-        Debug.Log("ProgressionSystem Awake on " + gameObject.name +
-                  ". currentLevel = " + currentLevel);
     }
-
+    
+    
+    
+    
     public void AddCoins(int amount)
     {
+        
         coins += amount;
         Debug.Log("Coins: " + coins);
     }
@@ -41,23 +41,23 @@ public class ProgressionSystem : MonoBehaviour
     {
         return ingredientsCollected >= totalIngredients;
     }
-
-    public bool IsLevelUnlocked(int levelNumber)
+    
+    public void CompleteLevel()
     {
-        Debug.Log("Checking unlock: levelNumber = " + levelNumber + ", currentLevel = " + currentLevel);
-        return levelNumber <= currentLevel;
+        
+        //Print in the console 
+        Debug.Log("Level completed, Currently at level " + currentLevel);
+        currentLevel++;
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
     }
 
-    public void CompleteLevel(int completedLevelNumber)
+    // Update is called once per frame
+    void Update()
     {
-        Debug.Log("CompleteLevel called with level " + completedLevelNumber + ". Before update, currentLevel = " + currentLevel);
-        if (completedLevelNumber >= currentLevel)
-        {
-            currentLevel = completedLevelNumber + 1;
-            Debug.Log("Level " + completedLevelNumber + " completed. currentLevel is now " + currentLevel);
-        }
-        else{
-            Debug.Log("Level " + completedLevelNumber + " was already completed. currentLevel remains " + currentLevel);
-        }
+        
     }
 }

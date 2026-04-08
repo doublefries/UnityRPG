@@ -53,11 +53,11 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable, IAttackable
     // awake runs once when  GameObject created: base.Awake() first to keep this logic, then add their own
     protected virtual void Awake()
     {
+        // set health to max so enemies spawn alive not at 0
         CurrentHealth = MaxHealth;
+        // cache the Rigidbody2D reference for subclasses to use in movement
+        // requireComponent guarantees this component exists
         rb = GetComponent<Rigidbody2D>();
-        // Kinematic so enemies don't push the player around
-        // MovePosition still works on kinematic bodies
-        rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
     // start runs once after Awake to initalize player
