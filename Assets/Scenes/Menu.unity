@@ -332,10 +332,10 @@ MonoBehaviour:
   optionPrefab: {fileID: 2255591237988974437, guid: f864819e096bb174999315712dcf09a4, type: 3}
   characters:
   - prefab: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
-    name: 1
+    name: Ember
     icon: {fileID: 9128384846270689552, guid: 8921388d16b25b54999ae6db77bb0ba0, type: 3}
   - prefab: {fileID: 6114917693223715754, guid: 7b0dda8dcea33ef489a46c470365c3d1, type: 3}
-    name: 2
+    name: Cobalt
     icon: {fileID: 9128384846270689552, guid: 01a970e5b78787443b402adc3cf1efc0, type: 3}
   startButton: {fileID: 2067487194}
 --- !u!1 &661597111
