@@ -16,7 +16,6 @@ public class CharacterAppearance : MonoBehaviour
         {
             sr.sprite = selected.icon;
         }
-
         Animator animator = GetComponent<Animator>(); //Swap animator controller
         if (animator != null && selected.animatorController != null)
         {
