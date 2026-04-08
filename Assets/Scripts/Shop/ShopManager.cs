@@ -12,8 +12,8 @@ public class ShopManager : MonoBehaviour
 
     private void Awake()
     {
-        shopItems.Add(new StrengthPotion(5, 10f, 5));
-        shopItems.Add(new SpeedPotion(5, 8f, 2f));
+        shopItems.Add(new StrengthPotion(20, 10f, 5));
+        shopItems.Add(new SpeedPotion(15, 8f, 2f));
         shopItems.Add(new Axe(50, 25));
         shopItems.Add(new Sword(40, 18));
     }
