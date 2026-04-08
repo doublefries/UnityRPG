@@ -15,6 +15,16 @@ public class BossEnemy : MeleeEnemy
     private bool fightStarted = false;
     private float lastShotTime;
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+    }
+
     public void StartFight()
     {
 
@@ -23,8 +33,8 @@ public class BossEnemy : MeleeEnemy
 
         fightStarted = true;
 
-        if (animator != null)
-            animator.SetBool(fightStartedParam, true);
+        // if (animator != null)
+        //     animator.SetBool(fightStartedParam, true);
     }
 
     protected override void Update()
@@ -34,6 +44,20 @@ public class BossEnemy : MeleeEnemy
 
         base.Update();
         TryShoot();
+        UpdateAnimation();
+    }
+
+    private void UpdateAnimation()
+    {
+        if (animator == null || playerTarget == null)
+        {
+            return;
+        }
+        
+        float dist = Vector2.Distance(transform.position, playerTarget.position);
+        bool inAttackRange = dist <= AttackRange;
+        
+        animator.SetBool(fightStartedParam, inAttackRange);
     }
 
     private void TryShoot()

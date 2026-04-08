@@ -8,18 +8,23 @@ public class FallingTiles : MonoBehaviour
     [SerializeField] private Tilemap playableAreaTilemap;
     [SerializeField] private Transform playerFeet;
     [SerializeField] private TileBase crackedTile;
+    [SerializeField] private Level1UIManager uiManager;
 
-    [SerializeField] private float startDelay = 1.5f;   // delay before any tiles start falling
+    [SerializeField] private float startDelay = 1.5f;
     [SerializeField] private float crackDelay = 0.2f;
     [SerializeField] private float breakDelay = 0.4f;
 
     private bool fallingActive = false;
+    private bool playerDead = false;
     private Vector3Int lastCell;
     private bool initialized = false;
     private HashSet<Vector3Int> triggeredCells = new HashSet<Vector3Int>();
 
     private void Start()
     {
+        if (uiManager == null)
+            uiManager = FindObjectOfType<Level1UIManager>();
+
         StartCoroutine(BeginFallingAfterDelay());
     }
 
@@ -31,7 +36,7 @@ public class FallingTiles : MonoBehaviour
 
     private void Update()
     {
-        if (!fallingActive)
+        if (!fallingActive || playerDead)
             return;
 
         Vector3Int currentCell = playableAreaTilemap.WorldToCell(playerFeet.position);
@@ -48,6 +53,12 @@ public class FallingTiles : MonoBehaviour
         {
             lastCell = currentCell;
             TryStartBreaking(currentCell);
+        }
+        
+        // if player is standing on a cell that already has no tile, die
+        if (!playableAreaTilemap.HasTile(currentCell))
+        {
+            KillPlayer();
         }
     }
 
@@ -67,7 +78,7 @@ public class FallingTiles : MonoBehaviour
     {
         yield return new WaitForSeconds(crackDelay);
 
-        if (!fallingActive)
+        if (!fallingActive || playerDead)
             yield break;
 
         if (crackedTile != null && playableAreaTilemap.HasTile(cell))
@@ -75,11 +86,40 @@ public class FallingTiles : MonoBehaviour
 
         yield return new WaitForSeconds(breakDelay);
 
-        if (!fallingActive)
+        if (!fallingActive || playerDead)
             yield break;
 
         if (playableAreaTilemap.HasTile(cell))
             playableAreaTilemap.SetTile(cell, null);
+
+        // check if player is still on the tile that just broke
+        Vector3Int playerCell = playableAreaTilemap.WorldToCell(playerFeet.position);
+        if (playerCell == cell)
+        {
+            KillPlayer();
+        }
+    }
+
+    private void KillPlayer()
+    {
+        if (playerDead)
+            return;
+
+        playerDead = true;
+        fallingActive = false;
+        StopAllCoroutines();
+
+        IDamageable damageable = playerFeet.GetComponentInParent<IDamageable>();
+        if (damageable != null)
+        {
+            damageable.Die();
+            return;
+        }
+
+        if (uiManager != null)
+        {
+            uiManager.PlayerDied();
+        }
     }
 
     public void StopFalling()
