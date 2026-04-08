@@ -185,4 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
   damageAmount: 1
-  destroyOnHit: 0
+  destroyOnHit: 1
