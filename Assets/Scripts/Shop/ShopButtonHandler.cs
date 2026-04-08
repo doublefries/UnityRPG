@@ -11,21 +11,21 @@ public class ShopButtonHandler : MonoBehaviour
     [SerializeField] private float speedBoostAmount = 2f;
     [SerializeField] private int strengthBoostAmount = 5;
     
-     private void Awake()
-        {
-            EnsureEventSystemExists();
-        }
+    private void Awake()
+    {
+        EnsureEventSystemExists();
+    }
+
+    private static void EnsureEventSystemExists()
+    {
+        if (EventSystem.current != null || FindAnyObjectByType<EventSystem>() != null)
+            return;
+        GameObject eventSystemObject = new GameObject("EventSystem");
+        eventSystemObject.AddComponent<EventSystem>();
+        eventSystemObject.AddComponent<StandaloneInputModule>();
+        Debug.Log("No EventSystem found in scene. Created one automatically for UI clicks.");
+    }
     
-        private static void EnsureEventSystemExists()
-        {
-            if (EventSystem.current != null || FindObjectOfType<EventSystem>() != null)
-                return;
-    
-            GameObject eventSystemObject = new GameObject("EventSystem");
-            eventSystemObject.AddComponent<EventSystem>();
-            eventSystemObject.AddComponent<StandaloneInputModule>();
-            Debug.Log("No EventSystem found in scene. Created one automatically for UI clicks.");
-        }
 
     public void OnBuyClicked()
     {
