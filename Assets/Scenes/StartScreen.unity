@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccebbafa5162f42f9a63f428091d93ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGameButton
-  targetSceneName: IsometricScene
+  targetSceneName: Menu
 --- !u!1 &1684350966
 GameObject:
   m_ObjectHideFlags: 0
