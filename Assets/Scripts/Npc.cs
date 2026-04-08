@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Npc : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Npc : MonoBehaviour
     public Button contButton;
     public float wordSpeed;
     public bool playerIsClose;
+    [Header("Scene Transition")]
+    [SerializeField] private string mainMenuSceneName = "IsometricScene";
 
     private bool isTyping;
     private bool dialogueOpen;
@@ -26,6 +29,7 @@ public class Npc : MonoBehaviour
     {
         if (playerIsClose && Input.GetKeyDown(KeyCode.E) && !dialogueOpen)
         {
+            Debug.Log("in range");
             if (dialogue == null || dialogue.Length == 0)
                 return;
 
@@ -91,6 +95,12 @@ public class Npc : MonoBehaviour
         {
             zeroText();
         }
+    }
+
+    public void ReturnToMainMenu()
+    {
+        ProgressionSystem.Instance.CompleteLevel(1);
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

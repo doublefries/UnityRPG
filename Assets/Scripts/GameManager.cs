@@ -6,31 +6,44 @@ public class GameManager : MonoBehaviour
 {
   public static GameManager instance;
   
-  [SerializeField] private string isometricSceneName = "IsometricScene";
+  public Character[] characters; //Contains player and player blue
+
+  public Character currentCharacter;
   
-  public Character selectedCharacter {get; private set;}
+  [SerializeField] private string isometricSceneName = "isometricScene";
 
   private void Awake()
   {
-    if (instance != null)
+    if (instance == null)
     {
-      Destroy(gameObject);
-      return;
+      instance = this; //Create manager
     }
 
-    instance = this;
+    else
+    {
+      Destroy(gameObject); //If we already have a game manager, destroy the one we created
+      return;
+    }
+    
     DontDestroyOnLoad(gameObject); //Continue for when we swap scenes
   }
 
-  public void SelectCharacter(Character character)
+  private void Start()
   {
-    selectedCharacter = character;
-    Debug.Log("Selected: " + character.name);
+    if (characters.Length == 0 && currentCharacter == null)
+    {
+      currentCharacter = characters[0]; //Initial set
+    }
+  }
+  
+  public void SetCharacter(Character character)
+  {
+      currentCharacter = character;
   }
 
   public void StartGame()
   {
-    if (selectedCharacter == null)
+    if (currentCharacter == null)
     {
       Debug.LogWarning("No character selected");
       return;
