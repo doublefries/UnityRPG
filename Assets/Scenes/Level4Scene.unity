@@ -355,6 +355,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &609520669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+  m_PrefabInstance: {fileID: 1323938067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094981026
 GameObject:
   m_ObjectHideFlags: 0
@@ -39232,6 +39237,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8342056027575607875, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
   m_PrefabInstance: {fileID: 1323938067}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229932705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609520669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d0393cf96c20840baf94a03968d45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level4PlayerMovement
+  currentMoveSpeed: 5
+  collisionOffset: 0.05
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+--- !u!114 &1229932713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609520669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c2d1b5ac259bc4a8d82952c249610b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level4PlayerAttack
+  attackRange: 1.5
+  attackDamage: 1
+  attackCooldown: 0.5
+--- !u!114 &1229932714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609520669}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8def4735389baf44977040c672e0ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  currentMoveSpeed: 1
+  collisionOffset: 0.05
+  jumpForce: 7
+  groundCheckPoint: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enableJump: 0
+  allowVerticalMovement: 1
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+--- !u!114 &1229932715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609520669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c385d439de63a684bb7052ede003bf46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IcePhysicsController
+  frictionCoefficient: 0.005
+  slideAcceleration: 5
+  maxSlideSpeed: 12
 --- !u!1 &1241426160
 GameObject:
   m_ObjectHideFlags: 0
@@ -39287,6 +39386,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7099313639165137941, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145304753113516453, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -39331,10 +39438,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8937713973892279097, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 75053454694760480, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229932705}
+    - targetCorrespondingSourceObject: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229932713}
+    - targetCorrespondingSourceObject: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229932715}
+    - targetCorrespondingSourceObject: {fileID: 6114917693223715754, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229932714}
   m_SourcePrefab: {fileID: 100100000, guid: 48a521c2208c9554ba69142993f6085d, type: 3}
 --- !u!1 &1499279120
 GameObject:
@@ -53561,8 +53685,6 @@ GameObject:
   - component: {fileID: 2128466387}
   - component: {fileID: 2128466386}
   - component: {fileID: 2128466388}
-  - component: {fileID: 2128466391}
-  - component: {fileID: 2128466390}
   - component: {fileID: 2128466389}
   - component: {fileID: 2128466392}
   m_Layer: 0
@@ -85931,79 +86053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a27644c22d2be044aa95bb513e609eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceZone
---- !u!50 &2128466390
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128466384}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &2128466391
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128466384}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 1
-  m_CompositeOrder: 0
-  m_Offset: {x: 118, y: 17}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 278, y: 42}
-  m_EdgeRadius: 0
 --- !u!19719996 &2128466392
 TilemapCollider2D:
   m_ObjectHideFlags: 0
