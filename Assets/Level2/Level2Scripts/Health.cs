@@ -38,7 +38,13 @@ public class Health : MonoBehaviour
             health = 0;
             Debug.Log(gameObject.name + " Died, Level failed ");
             isDead = true;
-            SceneManager.LoadScene("IsometricScene");
+
+            Level1UIManager ui = FindObjectOfType<Level1UIManager>();
+
+            if (ui != null)
+            {
+                ui.PlayerDied();
+            }
         }
         
         UpdateHearts();
