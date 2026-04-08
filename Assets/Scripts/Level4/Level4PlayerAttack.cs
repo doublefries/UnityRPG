@@ -1,10 +1,8 @@
 using UnityEngine;
 
-// Temporary script so the player can damage enemies during testing
-// Press Space to deal damage to the nearest enemy in range
-// Delete this once your team's real combat system is in place
 public class Level4PlayerAttack : MonoBehaviour
 {
+    [Header("Fallback Attack (no hitboxes needed)")]
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private int attackDamage = 1;
     [SerializeField] private float attackCooldown = 0.5f;
@@ -13,26 +11,36 @@ public class Level4PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // F key to match your team's attack key
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (Time.time - lastAttackTime < attackCooldown) return;
             lastAttackTime = Time.time;
 
-            // Find all colliders in range
+            Debug.Log("Player attacked!");
+
+            // Find everything in range
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange);
             foreach (Collider2D hit in hits)
             {
-                // Skip self
                 if (hit.gameObject == gameObject) continue;
 
                 IDamageable target = hit.GetComponent<IDamageable>();
+                if (target == null) target = hit.GetComponentInParent<IDamageable>();
+
                 if (target != null)
                 {
                     target.TakeDamage(attackDamage);
-                    Debug.Log($"Hit {hit.gameObject.name} for {attackDamage} damage");
-                    break; // Only hit one target per attack
+                    Debug.Log("Hit " + hit.gameObject.name + " for " + attackDamage + " damage");
                 }
             }
         }
+    }
+
+    // Draws the attack range in Scene view so you can see it
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

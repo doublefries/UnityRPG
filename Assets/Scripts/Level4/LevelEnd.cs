@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelEnd : MonoBehaviour
 {
     // The name of the next scene to load — must match exactly what's in Build Settings
-    [SerializeField] private string nextSceneName = "Level5";
+    [SerializeField] private string nextSceneName = "IsometricScene";
 
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -99,6 +99,7 @@ public class Npc : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        ProgressionSystem.Instance.CompleteLevel(1);
         SceneManager.LoadScene(mainMenuSceneName);
     }
 
