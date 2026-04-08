@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PortalExit
   portalVisualRoot: {fileID: 565043182}
   portalTriggerCollider: {fileID: 565043183}
-  nextSceneName: IsometricScene
+  nextSceneName: EndScreen
   enterDelay: 0.4
   startActive: 0
   levelNumber: 5

@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressionSystem
   coins: 0
-  currentLevel: 5
+  currentLevel: 1
   ingredientsCollected: 0
   totalIngredients: 5
 --- !u!4 &47659337
